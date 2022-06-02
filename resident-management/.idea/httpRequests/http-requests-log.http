@@ -1,3 +1,23 @@
+DELETE http://localhost:8080/residents/4/relationship/8
+Host: localhost:8080
+Content-Type: application/json
+
+<> 2022-06-02T202337.200.json
+
+###
+
+PUT http://localhost:8080/residents/4/relationship/8
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "자녀"
+}
+
+<> 2022-06-02T202000.200.json
+
+###
+
 POST http://localhost:8080/residents/4/relationship
 Host: localhost:8080
 Content-Type: application/json

@@ -1,0 +1,7 @@
+here#1
+resident - persist
+familyRelationship - persist, merge
+일 때,
+familyRelationship만 save해도 되는 걸까
+
+service에서 resident.getList().add(familyRelationship)이 안됌

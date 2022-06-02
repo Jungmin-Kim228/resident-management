@@ -81,7 +81,7 @@ public class Resident {
     // 세대와 비식별관계
     @JsonManagedReference
     @JsonIgnore
-    @OneToMany(mappedBy = "resident", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "resident", cascade = CascadeType.PERSIST)
     private List<Household> householdList = new ArrayList<>();
 
     @JsonManagedReference
