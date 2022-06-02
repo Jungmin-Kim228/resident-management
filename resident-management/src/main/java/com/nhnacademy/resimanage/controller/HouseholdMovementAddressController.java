@@ -6,6 +6,7 @@ import com.nhnacademy.resimanage.domain.householdMovementAddress.HouseholdMoveme
 import com.nhnacademy.resimanage.domain.householdMovementAddress.HouseholdMovementAddressRequest;
 import com.nhnacademy.resimanage.service.HouseholdMovementAddressService;
 import java.time.LocalDate;
+import java.util.List;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,7 +40,7 @@ public class HouseholdMovementAddressController {
     @PutMapping("/{reportDate}")
     public Output modifyHouseholdMoveAddr(
         @PathVariable("householdSerialNumber") Integer householdSerialNumber,
-        @PathVariable("reportDate") @DateTimeFormat(pattern="yyyyMMdd") LocalDate reportDate,
+        @PathVariable("reportDate") @DateTimeFormat(pattern = "yyyyMMdd") LocalDate reportDate,
         @RequestBody HouseholdMovementAddressModifyRequest request) {
 
         HouseholdMovementAddressDto householdMovementAddressDto =
@@ -51,7 +52,11 @@ public class HouseholdMovementAddressController {
     @DeleteMapping("/{reportDate}")
     public Output deleteHouseholdMoveAddr(
         @PathVariable("householdSerialNumber") Integer householdSerialNumber,
-        @PathVariable("reportDate") @DateTimeFormat(pattern="yyyyMMdd") LocalDate reportDate) {
-        return null;
+        @PathVariable("reportDate") @DateTimeFormat(pattern = "yyyyMMdd") LocalDate reportDate) {
+
+        List<String> serialNDate =
+            householdMovementAddressService.deleteHouseholdMovementAddress(householdSerialNumber,
+                reportDate);
+        return Output.success(serialNDate);
     }
 }

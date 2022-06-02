@@ -9,6 +9,7 @@ import com.nhnacademy.resimanage.repository.HouseholdMovementAddressRepository;
 import com.nhnacademy.resimanage.repository.HouseholdRepository;
 import com.nhnacademy.resimanage.service.HouseholdMovementAddressService;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,7 +30,6 @@ public class HouseholdMovementServiceImpl implements HouseholdMovementAddressSer
     @Override
     public HouseholdMovementAddressDto createHouseholdMovementAddress(Integer householdSerialNumber,
                                                                       HouseholdMovementAddressRequest request) {
-
         Household household =
             householdRepository.getHouseholdByHouseholdSerialNumber(householdSerialNumber);
 
@@ -55,16 +55,27 @@ public class HouseholdMovementServiceImpl implements HouseholdMovementAddressSer
     public HouseholdMovementAddressDto modifyHouseholdMovementAddress(Integer householdSerialNumber,
                                                                       LocalDate reportDate,
                                                                       HouseholdMovementAddressModifyRequest request) {
-
         HouseholdMovementAddress householdMovementAddress =
             householdMovementAddressRepository.getHouseholdMovementAddressByTwoKeys(reportDate,
                 householdSerialNumber);
 
         householdMovementAddress.setHouseMovementAddress(request.getHouseMovementAddress());
-        householdMovementAddress.setLastAddressYn(Optional.ofNullable(request.getLastAddressYn()).orElse("Y"));
+        householdMovementAddress.setLastAddressYn(
+            Optional.ofNullable(request.getLastAddressYn()).orElse("Y"));
 
         householdMovementAddressRepository.save(householdMovementAddress);
         return householdMovementAddressRepository.getHouseholdMovementAddressDtoByTwoKeys(
             reportDate, householdSerialNumber);
+    }
+
+    @Override
+    public List<String> deleteHouseholdMovementAddress(Integer householdSerialNumber,
+                                                       LocalDate reportDate) {
+        HouseholdMovementAddress householdMovementAddress =
+            householdMovementAddressRepository.getHouseholdMovementAddressByTwoKeys(reportDate,
+                householdSerialNumber);
+
+        householdMovementAddressRepository.delete(householdMovementAddress);
+        return List.of(String.valueOf(householdSerialNumber), String.valueOf(reportDate));
     }
 }

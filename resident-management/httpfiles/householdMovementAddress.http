@@ -23,6 +23,6 @@ Content-Type: application/json
 
 ###
 # delete household movement address
-DELETE /household/2/movement/2020-12-15
+DELETE /household/2/movement/20201215
 Host: localhost:8080
 Content-Type: application/json
