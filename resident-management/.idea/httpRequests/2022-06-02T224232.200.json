@@ -1,0 +1,3 @@
+{
+  "errorMessage": "Failed to convert value of type 'java.lang.String' to required type 'java.time.LocalDate'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [@org.springframework.web.bind.annotation.PathVariable java.time.LocalDate] for value '20201215'; nested exception is java.lang.IllegalArgumentException: Parse attempt failed for value [20201215]"
+}

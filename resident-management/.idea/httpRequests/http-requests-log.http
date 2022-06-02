@@ -1,3 +1,120 @@
+PUT http://localhost:8080/household/2/movement/20201215
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "houseMovementAddress": "김해시 외동 동동동",
+  "lastAddressYn": null
+}
+
+<> 2022-06-02T225139.200.json
+
+###
+
+PUT http://localhost:8080/household/2/movement/20201215
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "houseMovementAddress": "김해시 외동 동동동",
+  "lastAddressYn": null
+}
+
+<> 2022-06-02T225000.200.json
+
+###
+
+PUT http://localhost:8080/household/2/movement/20201215
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "houseMovementAddress": "김해시 외동 동동동",
+  "lastAddressYn": null
+}
+
+<> 2022-06-02T224807.200.json
+
+###
+
+PUT http://localhost:8080/household/2/movement/20201215
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "houseMovementAddress": "김해시 외동 동동동",
+  "lastAddressYn": null
+}
+
+<> 2022-06-02T224606.200.json
+
+###
+
+PUT http://localhost:8080/household/2/movement/20201215
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "houseMovementAddress": "김해시 외동 동동동",
+  "lastAddressYn": null
+}
+
+<> 2022-06-02T224238.200.json
+
+###
+
+PUT http://localhost:8080/household/2/movement/20201215
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "houseMovementAddress": "김해시 외동 동동동",
+  "lastAddressYn": null
+}
+
+<> 2022-06-02T224234.200.json
+
+###
+
+PUT http://localhost:8080/household/2/movement/20201215
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "houseMovementAddress": "김해시 외동 동동동",
+  "lastAddressYn": null
+}
+
+<> 2022-06-02T224232.200.json
+
+###
+
+PUT http://localhost:8080/household/2/movement/20201215
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "houseMovementAddress": "김해시 외동 동동동",
+  "lastAddressYn": null
+}
+
+<> 2022-06-02T224218.200.json
+
+###
+
+PUT http://localhost:8080/household/2/movement/2020-12-15
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "houseMovementAddress": "김해시 외동 동동동",
+  "lastAddressYn": null
+}
+
+<> 2022-06-02T224201.200.json
+
+###
+
 POST http://localhost:8080/household/2/movement
 Host: localhost:8080
 Content-Type: application/json

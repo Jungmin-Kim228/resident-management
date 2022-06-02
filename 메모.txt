@@ -10,3 +10,5 @@ service에서 resident.getList().add(familyRelationship)이 안됌
 ex) 같은 resident_serial_number(식별자)를 이용해서 rest보내면 덮어쓰기 됌
 세대, 가족관계 등등 모두 마찬가지
 
+* 세대가 만들어질때 자동으로 세대전입주소 테이블에도 내용추가해야하지 않나...?
++ 세대구성주민도...?

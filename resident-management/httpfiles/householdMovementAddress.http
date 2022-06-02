@@ -9,3 +9,20 @@ Content-Type: application/json
   "houseMovementAddress": "김해시 내동 블라블라",
   "lastAddressYn": null
 }
+
+###
+# modify household movement address
+PUT /household/2/movement/20201215
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "houseMovementAddress": "김해시 외동 동동동",
+  "lastAddressYn": null
+}
+
+###
+# delete household movement address
+DELETE /household/2/movement/2020-12-15
+Host: localhost:8080
+Content-Type: application/json

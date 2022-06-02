@@ -2,9 +2,11 @@ package com.nhnacademy.resimanage.controller;
 
 import com.nhnacademy.resimanage.domain.Output;
 import com.nhnacademy.resimanage.domain.householdMovementAddress.HouseholdMovementAddressDto;
+import com.nhnacademy.resimanage.domain.householdMovementAddress.HouseholdMovementAddressModifyRequest;
 import com.nhnacademy.resimanage.domain.householdMovementAddress.HouseholdMovementAddressRequest;
 import com.nhnacademy.resimanage.service.HouseholdMovementAddressService;
 import java.time.LocalDate;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,21 +30,28 @@ public class HouseholdMovementAddressController {
         @PathVariable("householdSerialNumber") Integer householdSerialNumber,
         @RequestBody HouseholdMovementAddressRequest request) {
 
-        HouseholdMovementAddressDto householdMovementAddressDto = householdMovementAddressService.createHouseholdMovementAddress(householdSerialNumber, request);
+        HouseholdMovementAddressDto householdMovementAddressDto =
+            householdMovementAddressService.createHouseholdMovementAddress(householdSerialNumber,
+                request);
         return Output.success(householdMovementAddressDto);
     }
 
     @PutMapping("/{reportDate}")
     public Output modifyHouseholdMoveAddr(
         @PathVariable("householdSerialNumber") Integer householdSerialNumber,
-        @PathVariable("reportDate") LocalDate reportDate) {
-        return null;
+        @PathVariable("reportDate") @DateTimeFormat(pattern="yyyyMMdd") LocalDate reportDate,
+        @RequestBody HouseholdMovementAddressModifyRequest request) {
+
+        HouseholdMovementAddressDto householdMovementAddressDto =
+            householdMovementAddressService.modifyHouseholdMovementAddress(householdSerialNumber,
+                reportDate, request);
+        return Output.success(householdMovementAddressDto);
     }
 
     @DeleteMapping("/{reportDate}")
     public Output deleteHouseholdMoveAddr(
         @PathVariable("householdSerialNumber") Integer householdSerialNumber,
-        @PathVariable("reportDate") LocalDate reportDate) {
+        @PathVariable("reportDate") @DateTimeFormat(pattern="yyyyMMdd") LocalDate reportDate) {
         return null;
     }
 }

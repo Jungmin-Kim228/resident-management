@@ -60,7 +60,9 @@ public class FamilyRelationshipServiceImpl implements FamilyRelationshipService 
                 familyResidentSerialNumber, baseResidentSerialNumber);
 
         familyRelationship.setFamilyRelationshipCode(request.getFamilyRelationshipCode());
+
         familyRelationshipRepository.save(familyRelationship);
+
         return familyRelationshipRepository.getFamilyRelationshipDtoByTwoSerialNumber(
             familyResidentSerialNumber,
             baseResidentSerialNumber);

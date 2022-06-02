@@ -13,7 +13,7 @@ public class HouseholdMovementAddressRepositoryImpl extends QuerydslRepositorySu
     }
 
     @Override
-    public HouseholdMovementAddressDto getHouseholdMovementAddressByTwoKeys(
+    public HouseholdMovementAddressDto getHouseholdMovementAddressDtoByTwoKeys(
         LocalDate houseMovementReportDate, Integer householdSerialNumber) {
         QHouseholdMovementAddress householdMovementAddress = QHouseholdMovementAddress.householdMovementAddress;
 

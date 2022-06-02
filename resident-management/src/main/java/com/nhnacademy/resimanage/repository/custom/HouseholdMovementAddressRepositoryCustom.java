@@ -7,6 +7,6 @@ import org.springframework.data.repository.NoRepositoryBean;
 @NoRepositoryBean
 public interface HouseholdMovementAddressRepositoryCustom {
 
-    HouseholdMovementAddressDto getHouseholdMovementAddressByTwoKeys(LocalDate houseMovementReportDate,
+    HouseholdMovementAddressDto getHouseholdMovementAddressDtoByTwoKeys(LocalDate houseMovementReportDate,
                                                                      Integer householdSerialNumber);
 }
