@@ -11,3 +11,9 @@ Content-Type: application/json
   "householdCompositionReasonCode": "세대분리",
   "currentHouseMovementAddress": "경기도 성남시 분당구 대왕판교로 645번길"
 }
+
+###
+# delete household
+DELETE /household/2
+Host: localhost:8080
+Content-Type: application/json

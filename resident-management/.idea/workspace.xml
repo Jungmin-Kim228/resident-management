@@ -10,15 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ff6fcfe-026e-418d-abf4-18c4cb02d5d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/Household.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/Household.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/HouseholdCompositionResident.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/HouseholdCompositionResident.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/HouseholdMovementAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/HouseholdMovementAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/Household.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/Household.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/HouseholdCompositionResident$Pk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/HouseholdCompositionResident$Pk.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/HouseholdCompositionResident.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/HouseholdCompositionResident.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/HouseholdMovementAddress$Pk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/HouseholdMovementAddress$Pk.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/HouseholdMovementAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/HouseholdMovementAddress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/ResidentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/ResidentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../메모.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../메모.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +90,7 @@
     <configuration name="household | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/httpfiles/household.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="resident | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/httpfiles/resident.http" index="2" requestIdentifier="#2" runType="Run single request">
+    <configuration name="household | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/httpfiles/household.http" index="2" requestIdentifier="#2" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.62" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.62" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -189,19 +182,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat 9.0.62" />
-      <item itemvalue="HTTP Request.resident | #2" />
       <item itemvalue="HTTP Request.familyRelationship | #1" />
       <item itemvalue="HTTP Request.familyRelationship | #2" />
       <item itemvalue="HTTP Request.familyRelationship | #3" />
       <item itemvalue="HTTP Request.household | #1" />
+      <item itemvalue="HTTP Request.household | #2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.household | #2" />
         <item itemvalue="HTTP Request.household | #1" />
         <item itemvalue="HTTP Request.familyRelationship | #3" />
         <item itemvalue="HTTP Request.familyRelationship | #2" />
         <item itemvalue="HTTP Request.familyRelationship | #1" />
-        <item itemvalue="HTTP Request.resident | #2" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +207,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654155968943</updated>
       <workItem from="1654155973639" duration="408000" />
-      <workItem from="1654156659520" duration="14151000" />
+      <workItem from="1654156659520" duration="14853000" />
     </task>
     <servers />
   </component>

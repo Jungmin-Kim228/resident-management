@@ -5,4 +5,6 @@ import com.nhnacademy.resimanage.domain.household.HouseholdRequest;
 
 public interface HouseholdService {
     HouseholdDto createHousehold(HouseholdRequest request);
+
+    Integer deleteHousehold(Integer householdSerialNumber);
 }

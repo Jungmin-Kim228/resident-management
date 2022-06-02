@@ -1,7 +1,12 @@
-here#1
+* here#1
 resident - persist
 familyRelationship - persist, merge
 일 때,
 familyRelationship만 save해도 되는 걸까
 
 service에서 resident.getList().add(familyRelationship)이 안됌
+
+* 아무런 예외처리가 되어 있지 않음
+ex) 같은 resident_serial_number(식별자)를 이용해서 rest보내면 덮어쓰기 됌
+세대, 가족관계 등등 모두 마찬가지
+

@@ -4,7 +4,6 @@ import com.nhnacademy.resimanage.domain.Output;
 import com.nhnacademy.resimanage.domain.resident.ResidentDto;
 import com.nhnacademy.resimanage.domain.resident.ResidentModifyRequest;
 import com.nhnacademy.resimanage.domain.resident.ResidentRequest;
-import com.nhnacademy.resimanage.entity.Resident;
 import com.nhnacademy.resimanage.service.ResidentService;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;

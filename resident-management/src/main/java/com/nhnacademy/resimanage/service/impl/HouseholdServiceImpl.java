@@ -37,4 +37,13 @@ public class HouseholdServiceImpl implements HouseholdService {
 
         return householdRepository.getHouseholdDtoByHouseholdSerialNumber(request.getHouseholdSerialNumber());
     }
+
+    @Override
+    public Integer deleteHousehold(Integer householdSerialNumber) {
+        Household household = householdRepository.getHouseholdByHouseholdSerialNumber(householdSerialNumber);
+
+        householdRepository.delete(household);
+
+        return householdSerialNumber;
+    }
 }

@@ -28,6 +28,7 @@ public class HouseholdController {
 
     @DeleteMapping("/{householdSerialNumber}")
     public Output deleteHousehold(@PathVariable("householdSerialNumber") Integer householdSerialNumber) {
-        return null;
+        Integer serialNumber = householdService.deleteHousehold(householdSerialNumber);
+        return Output.success(serialNumber);
     }
 }
