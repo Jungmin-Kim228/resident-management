@@ -3,6 +3,7 @@ package com.nhnacademy.resimanage.entity;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import java.io.Serializable;
 import java.time.LocalDate;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
@@ -12,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.MapsId;
 import javax.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,7 +31,7 @@ public class HouseholdMovementAddress {
 
     // 세대와 식별관계, pk, fk
     @MapsId("householdSerialNumber")
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "household_serial_number")
     @JsonBackReference
     private Household household;
@@ -53,5 +55,19 @@ public class HouseholdMovementAddress {
         // 세대와 식별관계, pk, fk
         @Column(name = "household_serial_number")
         private Integer householdSerialNumber;
+    }
+
+    @Builder(builderMethodName = "addHouseholdMovementAddress")
+    public static HouseholdMovementAddress createHouseholdMovementAddress(LocalDate householdMovementReportDate,
+                                                                          Household household,
+                                                                          String houseMovementAddress,
+                                                                          String lastAddressYn) {
+        HouseholdMovementAddress householdMovementAddress = new HouseholdMovementAddress();
+        householdMovementAddress.setPk(new Pk(householdMovementReportDate, household.getHouseholdSerialNumber()));
+        householdMovementAddress.setHousehold(household);
+        householdMovementAddress.setHouseMovementAddress(houseMovementAddress);
+        householdMovementAddress.setLastAddressYn(lastAddressYn);
+        return householdMovementAddress;
+        // here service단에서 lastAddress optional로 기본값 처리하기
     }
 }

@@ -1,0 +1,11 @@
+###
+# create household movement address
+POST /household/2/movement HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "houseMovementReportDate": "2020-12-15",
+  "houseMovementAddress": "김해시 내동 블라블라",
+  "lastAddressYn": null
+}

@@ -1,5 +1,5 @@
 ###
-# create relationship
+# create family relationship
 POST /residents/4/relationship HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
@@ -10,7 +10,7 @@ Content-Type: application/json
 }
 
 ###
-# modify relationship
+# modify family relationship
 PUT /residents/4/relationship/8
 Host: localhost:8080
 Content-Type: application/json
@@ -20,7 +20,7 @@ Content-Type: application/json
 }
 
 ###
-# delete relationship
+# delete family relationship
 DELETE /residents/4/relationship/8
 Host: localhost:8080
 Content-Type: application/json

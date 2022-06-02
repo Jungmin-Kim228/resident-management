@@ -22,12 +22,15 @@ public class HouseholdController {
 
     @PostMapping
     public Output createHousehold(@RequestBody HouseholdRequest request) {
+
         HouseholdDto householdDto = householdService.createHousehold(request);
         return Output.success(householdDto);
     }
 
     @DeleteMapping("/{householdSerialNumber}")
-    public Output deleteHousehold(@PathVariable("householdSerialNumber") Integer householdSerialNumber) {
+    public Output deleteHousehold(
+        @PathVariable("householdSerialNumber") Integer householdSerialNumber) {
+
         Integer serialNumber = householdService.deleteHousehold(householdSerialNumber);
         return Output.success(serialNumber);
     }

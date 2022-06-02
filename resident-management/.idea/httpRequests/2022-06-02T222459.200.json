@@ -1,0 +1,9 @@
+{
+  "data": {
+    "householdSerialNumber": 2,
+    "householdResidentSerialNumber": 9,
+    "householdCompositionDate": "2020-12-12",
+    "householdCompositionReasonCode": "세대분리",
+    "currentHouseMovementAddress": "김해시 내외동 어쩌구저쩌구"
+  }
+}
