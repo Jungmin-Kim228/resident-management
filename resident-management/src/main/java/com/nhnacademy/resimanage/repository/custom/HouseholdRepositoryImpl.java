@@ -13,6 +13,7 @@ public class HouseholdRepositoryImpl extends QuerydslRepositorySupport implement
 
     @Override
     public HouseholdDto getHouseholdDtoByHouseholdSerialNumber(Integer householdSerialNumber) {
+
         QHousehold household = QHousehold.household;
 
         return from(household)

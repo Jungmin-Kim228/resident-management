@@ -15,6 +15,7 @@ public class HouseholdMovementAddressRepositoryImpl extends QuerydslRepositorySu
     @Override
     public HouseholdMovementAddressDto getHouseholdMovementAddressDtoByTwoKeys(
         LocalDate houseMovementReportDate, Integer householdSerialNumber) {
+
         QHouseholdMovementAddress householdMovementAddress = QHouseholdMovementAddress.householdMovementAddress;
 
         return from(householdMovementAddress)

@@ -1,0 +1,32 @@
+###
+# create birth report
+POST /residents/4/birth HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 8,
+  "birthDeathReportDate": "2012-03-17",
+  "birthReportQualificationsCode": "부",
+  "emailAddress": null,
+  "phoneNumber": "010-1234-4568"
+}
+
+###
+# modify birth report
+PUT /residents/4/birth/8
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "birthDeathReportDate": "2012-03-18",
+  "birthReportQualificationsCode": "부",
+  "emailAddress": "namnam@nav.com",
+  "phoneNumber": "010-1122-3344"
+}
+
+###
+# delete birth report
+DELETE /residents/4/birth/8
+Host: localhost:8080
+Content-Type: application/json

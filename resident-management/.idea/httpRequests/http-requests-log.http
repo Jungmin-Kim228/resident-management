@@ -1,3 +1,88 @@
+PUT http://localhost:8080/residents/4/birth/8
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "birthDeathReportDate": "2012-03-18",
+  "birthReportQualificationsCode": "부",
+  "emailAddress": "namnam@nav.com",
+  "phoneNumber": "010-1122-3344"
+}
+
+###
+
+PUT http://localhost:8080/residents/4/birth/8
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "birthDeathReportDate": "2012-03-18",
+  "birthReportQualificationsCode": "부",
+  "emailAddress": "namnam@nav.com",
+  "phoneNumber": "010-1122-3344"
+}
+
+###
+
+POST http://localhost:8080/residents/4/birth
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 8,
+  "birthDeathReportDate": "2012-03-17",
+  "birthReportQualificationsCode": "부",
+  "emailAddress": null,
+  "phoneNumber": "010-1234-4568"
+}
+
+<> 2022-06-03T025643.200.json
+
+###
+
+PUT http://localhost:8080/residents/4/relationship/8
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "자녀"
+}
+
+<> 2022-06-03T025629.200.json
+
+###
+
+POST http://localhost:8080/residents/4/relationship
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyResidentSerialNumber": 8,
+  "familyRelationshipCode": "모"
+}
+
+<> 2022-06-03T025627.200.json
+
+###
+
+POST http://localhost:8080/residents
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 8,
+  "name": "남하나",
+  "residentRegistrationNumber": "120315-1234568",
+  "genderCode" : "여",
+  "birthDate": "2012-03-15T14:59:11",
+  "birthPlaceCode": "병원",
+  "registrationBaseAddress" : "서울특별시 뭐뭐대로"
+}
+
+<> 2022-06-03T025615.200.json
+
+###
+
 DELETE http://localhost:8080/household/2/movement/20201215
 Host: localhost:8080
 Content-Type: application/json

@@ -16,6 +16,7 @@ public class FamilyRelationshipRepositoryImpl extends QuerydslRepositorySupport
     @Override
     public FamilyRelationshipDto getFamilyRelationshipDtoByTwoSerialNumber(
         Integer familyResidentSerialNumber, Integer baseResidentSerialNumber) {
+
         QFamilyRelationship familyRelationship = QFamilyRelationship.familyRelationship;
 
         return from(familyRelationship)

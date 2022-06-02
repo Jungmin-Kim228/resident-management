@@ -67,14 +67,17 @@ public class BirthDeathReportResident {
     }
 
     @Builder(builderMethodName = "addBirthReportResident")
-    public static BirthDeathReportResident createBirthReportResident(Resident resident,
-                                                                     Resident reportResident,
-                                                                     LocalDate birthReportDate,
-                                                                     String birthReportQualificationsCode,
-                                                                     String emailAddress,
-                                                                     String phoneNumber) {
+    public static BirthDeathReportResident createBirthReportResident(
+        Integer reportResidentSerialNumber,
+        Resident resident,
+        LocalDate birthReportDate,
+        String birthReportQualificationsCode,
+        String emailAddress,
+        String phoneNumber) {
+
         BirthDeathReportResident birthReportResident = new BirthDeathReportResident();
-        birthReportResident.setPk(new Pk("출생", resident.getResidentSerialNumber(), reportResident.getResidentSerialNumber()));
+        birthReportResident.setPk(
+            new Pk("출생", reportResidentSerialNumber, resident.getResidentSerialNumber()));
         birthReportResident.setResident(resident);
         birthReportResident.setBirthDeathReportDate(birthReportDate);
         birthReportResident.setBirthReportQualificationsCode(birthReportQualificationsCode);
@@ -85,14 +88,16 @@ public class BirthDeathReportResident {
     }
 
     @Builder(builderMethodName = "addDeathReportResident")
-    public static BirthDeathReportResident createDeathReportResident(Resident resident,
-                                                                     Resident reportResident,
-                                                                     LocalDate deathReportDate,
-                                                                     String deathReportQualificationsCode,
-                                                                     String emailAddress,
-                                                                     String phoneNumber) {
+    public static BirthDeathReportResident createDeathReportResident(
+        Integer reportResidentSerialNumber,
+        Resident resident,
+        LocalDate deathReportDate,
+        String deathReportQualificationsCode,
+        String emailAddress,
+        String phoneNumber) {
+
         BirthDeathReportResident deathReportResident = new BirthDeathReportResident();
-        deathReportResident.setPk(new Pk("사망", resident.getResidentSerialNumber(), reportResident.getResidentSerialNumber()));
+        deathReportResident.setPk(new Pk("사망", reportResidentSerialNumber, resident.getResidentSerialNumber()));
         deathReportResident.setResident(resident);
         deathReportResident.setBirthDeathReportDate(deathReportDate);
         deathReportResident.setBirthReportQualificationsCode(deathReportQualificationsCode);
@@ -101,5 +106,4 @@ public class BirthDeathReportResident {
 
         return deathReportResident;
     }
-
 }
