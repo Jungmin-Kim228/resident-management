@@ -1,3 +1,23 @@
+PUT http://localhost:8080/residents/8
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "name": "남하나",
+  "residentRegistrationNumber": "120315-1234568",
+  "genderCode" : "여",
+  "birthDate": "2012-03-15T14:59:11",
+  "birthPlaceCode": "병원",
+  "registrationBaseAddress" : "경기도 성남시 분당구 대왕판교로645번길",
+  "deathDate": "2012-03-15T22:22:22",
+  "deathPlaceCode": "병원",
+  "deathPlaceAddress" : "서울특별시 뭐뭐대로"
+}
+
+<> 2022-06-02T184010.200.json
+
+###
+
 POST http://localhost:8080/residents
 Host: localhost:8080
 Content-Type: application/json

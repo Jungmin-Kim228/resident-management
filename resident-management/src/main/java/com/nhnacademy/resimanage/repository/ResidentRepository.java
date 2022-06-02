@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ResidentRepository extends JpaRepository<Resident, Integer> {
     ResidentDto getResidentDtoByResidentSerialNumber(Integer residentSerialNumber);
+
+    Resident getResidentByResidentSerialNumber(Integer residentSerialNumber);
 }

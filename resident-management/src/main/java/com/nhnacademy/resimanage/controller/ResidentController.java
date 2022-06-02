@@ -32,7 +32,8 @@ public class ResidentController {
     @PutMapping("/{serialNumber}")
     public Output modifyResident(@PathVariable("serialNumber") Integer residentSerialNumber,
                                  @RequestBody ResidentModifyRequest request) {
-        return null;
+        ResidentDto residentDto = residentService.modifyResident(residentSerialNumber, request);
+        return Output.success(residentDto);
     }
 
     @DeleteMapping("/{serialNumber}")

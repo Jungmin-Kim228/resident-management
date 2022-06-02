@@ -1,6 +1,5 @@
 package com.nhnacademy.resimanage.domain.resident;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import java.time.LocalDateTime;
 import lombok.Data;
 

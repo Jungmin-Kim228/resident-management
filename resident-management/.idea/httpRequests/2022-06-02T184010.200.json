@@ -1,0 +1,14 @@
+{
+  "data": {
+    "name": "남하나",
+    "residentRegistrationNumber": "120315-1234568",
+    "registrationBaseAddress": "경기도 성남시 분당구 대왕판교로645번길",
+    "deathPlaceAddress": "서울특별시 뭐뭐대로",
+    "residentSerialNumber": 8,
+    "deathDate": "2012-03-15T22:22:22",
+    "birthDate": "2012-03-15T14:59:11",
+    "deathPlaceCode": "병원",
+    "birthPlaceCode": "병원",
+    "genderCode": "여"
+  }
+}
