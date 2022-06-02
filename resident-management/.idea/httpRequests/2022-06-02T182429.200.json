@@ -1,0 +1,14 @@
+{
+  "data": {
+    "name": "남하나",
+    "residentRegistrationNumber": "120315-1234568",
+    "registrationBaseAddress": "서울특별시 뭐뭐대로",
+    "deathPlaceAddress": null,
+    "residentSerialNumber": 8,
+    "deathDate": null,
+    "birthDate": "2012-03-15T14:59:11",
+    "deathPlaceCode": null,
+    "birthPlaceCode": "병원",
+    "genderCode": "여"
+  }
+}

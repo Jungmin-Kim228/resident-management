@@ -1,5 +1,6 @@
 package com.nhnacademy.resimanage.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -55,26 +56,31 @@ public class Resident {
 
     // 출생사망신고주민과 식별관계
     @JsonManagedReference
+    @JsonIgnore
     @OneToMany(mappedBy = "resident", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     private List<BirthDeathReportResident> birthDeathReportResidentList = new ArrayList<>();
 
     // 가족관계와 식별관계
     @JsonManagedReference
+    @JsonIgnore
     @OneToMany(mappedBy = "baseResident", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     private List<FamilyRelationship> baseFamilyRelationshipList = new ArrayList<>();
 
     // 세대구성주민과 식별관계
     @JsonManagedReference
+    @JsonIgnore
     @OneToMany(mappedBy = "resident", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     private List<HouseholdCompositionResident> householdCompositionResidentList = new ArrayList<>();
 
     //증명서발급과 비식별관계
     @JsonManagedReference
+    @JsonIgnore
     @OneToMany(mappedBy = "resident", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     private List<CertificateIssue> certificateIssueList = new ArrayList<>();
 
     // 세대와 비식별관계
     @JsonManagedReference
+    @JsonIgnore
     @OneToMany(mappedBy = "resident", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
     private List<Household> householdList = new ArrayList<>();
 

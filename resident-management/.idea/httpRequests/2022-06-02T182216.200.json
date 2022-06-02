@@ -1,0 +1,9 @@
+{
+  "data": {
+    "name": "남하나",
+    "residentRegistrationNumber": "120315-1234568",
+    "residentSerialNumber": 8
+  }
+}{
+  "errorMessage": "Could not write JSON: Invoked method public abstract java.time.LocalDateTime com.nhnacademy.resimanage.domain.resident.ResidentDto.birthDate() is no accessor method!; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Invoked method public abstract java.time.LocalDateTime com.nhnacademy.resimanage.domain.resident.ResidentDto.birthDate() is no accessor method! (through reference chain: com.nhnacademy.resimanage.domain.Output[\"data\"]->com.sun.proxy.$Proxy262[\"birthDate\"])"
+}
