@@ -10,10 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ff6fcfe-026e-418d-abf4-18c4cb02d5d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/BirthReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/BirthReportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/httpfiles/resident.http" beforeDir="false" afterPath="$PROJECT_DIR$/httpfiles/resident.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/BirthDeathReportResident.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/BirthDeathReportResident.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/Resident.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/Resident.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/BirthDeathReportResidentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/BirthDeathReportResidentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/BirthReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/BirthReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/BirthReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/BirthReportServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/BirthDeathReportResidentRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/BirthDeathReportResidentRepositoryCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/BirthDeathReportResidentRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/BirthDeathReportResidentRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$BirthDeathReportResidentBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$BirthDeathReportResidentBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$Pk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$Pk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/Resident.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/Resident.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/repository/BirthDeathReportResidentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/repository/BirthDeathReportResidentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$BirthDeathReportResidentBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$BirthDeathReportResidentBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$Pk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$Pk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/Resident.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/Resident.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/repository/BirthDeathReportResidentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/repository/BirthDeathReportResidentRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +104,7 @@
     <configuration name="birthReport | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/httpfiles/birthReport.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="familyRelationship | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/httpfiles/familyRelationship.http" requestIdentifier="#1" runType="Run single request">
+    <configuration name="deathReport | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/httpfiles/deathReport.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="familyRelationship | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/httpfiles/familyRelationship.http" index="2" requestIdentifier="#2" runType="Run single request">
@@ -185,19 +199,19 @@
     </configuration>
     <list>
       <item itemvalue="Tomcat Server.Tomcat 9.0.62" />
-      <item itemvalue="HTTP Request.familyRelationship | #1" />
       <item itemvalue="HTTP Request.familyRelationship | #2" />
       <item itemvalue="HTTP Request.birthReport | #1" />
       <item itemvalue="HTTP Request.birthReport | #2" />
       <item itemvalue="HTTP Request.birthReport | #3" />
+      <item itemvalue="HTTP Request.deathReport | #1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.deathReport | #1" />
+        <item itemvalue="HTTP Request.birthReport | #1" />
         <item itemvalue="HTTP Request.birthReport | #3" />
         <item itemvalue="HTTP Request.birthReport | #2" />
-        <item itemvalue="HTTP Request.birthReport | #1" />
         <item itemvalue="HTTP Request.familyRelationship | #2" />
-        <item itemvalue="HTTP Request.familyRelationship | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +224,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654155968943</updated>
       <workItem from="1654155973639" duration="408000" />
-      <workItem from="1654156659520" duration="23119000" />
+      <workItem from="1654156659520" duration="28495000" />
     </task>
     <servers />
   </component>

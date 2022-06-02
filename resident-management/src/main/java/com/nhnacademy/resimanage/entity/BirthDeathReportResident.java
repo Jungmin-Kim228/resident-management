@@ -2,6 +2,7 @@ package com.nhnacademy.resimanage.entity;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
@@ -29,7 +30,7 @@ public class BirthDeathReportResident {
 
     // 주민과 식별관계 pk, fk, 복합키
     @MapsId("residentSerialNumber")
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "resident_serial_number")
     private Resident resident;
 
@@ -97,10 +98,11 @@ public class BirthDeathReportResident {
         String phoneNumber) {
 
         BirthDeathReportResident deathReportResident = new BirthDeathReportResident();
-        deathReportResident.setPk(new Pk("사망", reportResidentSerialNumber, resident.getResidentSerialNumber()));
+        deathReportResident.setPk(
+            new Pk("사망", reportResidentSerialNumber, resident.getResidentSerialNumber()));
         deathReportResident.setResident(resident);
         deathReportResident.setBirthDeathReportDate(deathReportDate);
-        deathReportResident.setBirthReportQualificationsCode(deathReportQualificationsCode);
+        deathReportResident.setDeathReportQualificationsCode(deathReportQualificationsCode);
         deathReportResident.setEmailAddress(emailAddress);
         deathReportResident.setPhoneNumber(phoneNumber);
 

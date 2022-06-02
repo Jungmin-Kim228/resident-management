@@ -57,7 +57,7 @@ public class Resident {
     // 출생사망신고주민과 식별관계
     @JsonManagedReference
     @JsonIgnore
-    @OneToMany(mappedBy = "resident", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "resident")
     private List<BirthDeathReportResident> birthDeathReportResidentList = new ArrayList<>();
 
     // 가족관계와 식별관계

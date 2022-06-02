@@ -9,6 +9,9 @@ public interface BirthDeathReportResidentRepository
     extends JpaRepository<BirthDeathReportResident, BirthDeathReportResident.Pk>,
     BirthDeathReportResidentRepositoryCustom {
 
-    @Query("select i from BirthDeathReportResident i where i.pk.reportResidentSerialNumber = ?1 and i.pk.residentSerialNumber = ?2")
+    @Query("select i from BirthDeathReportResident i where i.pk.birthDeathTypeCode = '출생' and i.pk.reportResidentSerialNumber = ?1 and i.pk.residentSerialNumber = ?2")
     BirthDeathReportResident getBirthReportBySerialNumbers(Integer reportSerialNumber, Integer targetSerialNumber);
+
+    @Query("select i from BirthDeathReportResident i where i.pk.birthDeathTypeCode = '사망' and i.pk.reportResidentSerialNumber = ?1 and i.pk.residentSerialNumber = ?2")
+    BirthDeathReportResident getDeathReportBySerialNumbers(Integer reportSerialNumber, Integer targetSerialNumber);
 }

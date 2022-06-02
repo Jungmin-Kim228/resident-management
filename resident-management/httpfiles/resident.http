@@ -27,7 +27,7 @@ Content-Type: application/json
   "birthDate": "2012-03-15T14:59:11",
   "birthPlaceCode": "병원",
   "registrationBaseAddress" : "경기도 성남시 분당구 대왕판교로645번길",
-  "deathDate": "2012-03-15T22:22:22",
+  "deathDate": "2012-04-15T22:22:22",
   "deathPlaceCode": "병원",
   "deathPlaceAddress" : "서울특별시 뭐뭐대로"
 }
