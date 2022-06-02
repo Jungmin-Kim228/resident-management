@@ -1,3 +1,26 @@
+DELETE http://localhost:8080/residents/4/birth/8
+Host: localhost:8080
+Content-Type: application/json
+
+<> 2022-06-03T030833.200.json
+
+###
+
+PUT http://localhost:8080/residents/4/birth/8
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "birthDeathReportDate": "2012-03-18",
+  "birthReportQualificationsCode": "부",
+  "emailAddress": "namnam@nav.com",
+  "phoneNumber": "010-1122-3344"
+}
+
+<> 2022-06-03T030810.200.json
+
+###
+
 PUT http://localhost:8080/residents/4/birth/8
 Host: localhost:8080
 Content-Type: application/json
