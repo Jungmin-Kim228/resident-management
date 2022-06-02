@@ -1,0 +1,3 @@
+{
+  "errorMessage": "failed to lazily initialize a collection of role: com.nhnacademy.resimanage.entity.Resident.baseFamilyRelationshipList, could not initialize proxy - no Session"
+}

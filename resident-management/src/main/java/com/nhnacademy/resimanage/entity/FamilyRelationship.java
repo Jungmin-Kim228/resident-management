@@ -28,9 +28,9 @@ public class FamilyRelationship {
     @EmbeddedId
     private Pk pk;
 
-    // 주민과 식별관계, pk, fk, 복합키
+    // 주민과 식별관계, pk, fk, 복합키, 기준 주민
     @MapsId("baseResidentSerialNumber")
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "base_resident_serial_number")
     @JsonBackReference
     private Resident baseResident;
@@ -54,11 +54,11 @@ public class FamilyRelationship {
     }
 
     @Builder(builderMethodName = "addRelationship")
-    public static FamilyRelationship createFamilyRelationship(Resident resident,
+    public static FamilyRelationship createFamilyRelationship(Integer familyResidentSerialNumber,
                                                               Resident baseResident,
                                                               String familyRelationshipCode) {
         FamilyRelationship relationship = new FamilyRelationship();
-        relationship.setPk(new Pk(resident.getResidentSerialNumber(), baseResident.getResidentSerialNumber()));
+        relationship.setPk(new Pk(familyResidentSerialNumber, baseResident.getResidentSerialNumber()));
         relationship.setBaseResident(baseResident);
         relationship.setFamilyRelationshipCode(familyRelationshipCode);
         return relationship;

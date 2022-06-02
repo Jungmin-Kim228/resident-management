@@ -1,3 +1,120 @@
+POST http://localhost:8080/residents/4/relationship
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyResidentSerialNumber": 8,
+  "familyRelationshipCode": "모"
+}
+
+<> 2022-06-02T200122.200.json
+
+###
+
+POST http://localhost:8080/residents/4/relationship
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyResidentSerialNumber": 8,
+  "familyRelationshipCode": "모"
+}
+
+<> 2022-06-02T195819.200.json
+
+###
+
+POST http://localhost:8080/residents/4/relationship
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyResidentSerialNumber": 8,
+  "familyRelationshipCode": "모"
+}
+
+<> 2022-06-02T195509.200.json
+
+###
+
+POST http://localhost:8080/residents/4/relationship
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyResidentSerialNumber": 8,
+  "familyRelationshipCode": "모"
+}
+
+<> 2022-06-02T194642.200.json
+
+###
+
+POST http://localhost:8080/residents/4/relationship
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyResidentSerialNumber": 8,
+  "familyRelationshipCode": "모"
+}
+
+<> 2022-06-02T193913.200.json
+
+###
+
+POST http://localhost:8080/residents/4/relationship
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyResidentSerialNumber": 8,
+  "familyRelationshipCode": "모"
+}
+
+<> 2022-06-02T193737.200.json
+
+###
+
+POST http://localhost:8080/residents/4/relationship
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 8,
+  "familyRelationshipCode": "모"
+}
+
+<> 2022-06-02T193634.200.json
+
+###
+
+POST http://localhost:8080/residents/4/relationship
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 8,
+  "familyRelationshipCode": "모"
+}
+
+<> 2022-06-02T191921.200.json
+
+###
+
+POST http://localhost:8080/residents/4/relationship
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "residentSerialNumber": 8,
+  "familyRelationshipCode": "모"
+}
+
+<> 2022-06-02T191637.200.json
+
+###
+
 PUT http://localhost:8080/residents/8
 Host: localhost:8080
 Content-Type: application/json

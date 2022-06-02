@@ -1,0 +1,26 @@
+###
+# create relationship
+POST /residents/4/relationship HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyResidentSerialNumber": 8,
+  "familyRelationshipCode": "모"
+}
+
+###
+# modify relationship
+PUT /residents/4/relationship/8
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "familyRelationshipCode": "자녀"
+}
+
+###
+# delete relationship
+DELETE /residents/4/relationship/8
+Host: localhost:8080
+Content-Type: application/json
