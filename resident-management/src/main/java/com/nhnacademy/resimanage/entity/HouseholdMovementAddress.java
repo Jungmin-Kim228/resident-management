@@ -1,5 +1,6 @@
 package com.nhnacademy.resimanage.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import java.io.Serializable;
 import java.time.LocalDate;
 import javax.persistence.Column;
@@ -30,6 +31,7 @@ public class HouseholdMovementAddress {
     @MapsId("householdSerialNumber")
     @ManyToOne
     @JoinColumn(name = "household_serial_number")
+    @JsonBackReference
     private Household household;
 
     @Column(name = "house_movement_address", length = 500)

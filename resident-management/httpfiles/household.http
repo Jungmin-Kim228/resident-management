@@ -1,0 +1,13 @@
+###
+# create household
+POST /household HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "householdSerialNumber": 2,
+  "householdResidentSerialNumber": 9,
+  "householdCompositionDate": "2020-12-12",
+  "householdCompositionReasonCode": "세대분리",
+  "currentHouseMovementAddress": "경기도 성남시 분당구 대왕판교로 645번길"
+}

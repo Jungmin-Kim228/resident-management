@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -27,7 +28,7 @@ public class Household {
     private Integer householdSerialNumber;
 
     // 주민과 비식별관계, fk
-    @ManyToOne
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "household_resident_serial_number")
     private Resident resident;
 
@@ -47,4 +48,18 @@ public class Household {
     // 세대전입주소와 식별관계
     @OneToMany(mappedBy = "household", cascade = CascadeType.PERSIST)
     private List<HouseholdMovementAddress> householdMovementAddressList = new ArrayList<>();
+    // here#2 뭔가 오작동하면 @JsonManageReference @JsonIgnore
+
+    @Builder(builderMethodName = "addHousehold")
+    public static Household createHousehold(Integer householdSerialNumber, Resident resident,
+                                  LocalDate householdCompositionDate, String householdCompositionReasonCode,
+                                  String currentHouseMovementAddress) {
+        Household household = new Household();
+        household.setHouseholdSerialNumber(householdSerialNumber);
+        household.setResident(resident);
+        household.setHouseholdCompositionDate(householdCompositionDate);
+        household.setHouseholdCompositionReasonCode(householdCompositionReasonCode);
+        household.setCurrentHouseMovementAddress(currentHouseMovementAddress);
+        return household;
+    }
 }
