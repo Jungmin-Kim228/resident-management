@@ -1,0 +1,11 @@
+{
+  "data": {
+    "birthDeathTypeCode": "출생",
+    "reportResidentSerialNumber": 4,
+    "residentSerialNumber": 8,
+    "birthDeathReportDate": "2012-03-18",
+    "birthReportQualificationsCode": "부",
+    "emailAddress": "namnam@nav.com",
+    "phoneNumber": "010-1234-4568"
+  }
+}

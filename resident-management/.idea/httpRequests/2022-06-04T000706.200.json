@@ -1,0 +1,11 @@
+{
+  "data": {
+    "birthDeathTypeCode": "사망",
+    "reportResidentSerialNumber": 4,
+    "residentSerialNumber": 8,
+    "birthDeathReportDate": "2012-04-17",
+    "deathReportQualificationsCode": "부",
+    "emailAddress": "",
+    "phoneNumber": "010-1234-4568"
+  }
+}

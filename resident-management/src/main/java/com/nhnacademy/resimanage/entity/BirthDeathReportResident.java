@@ -1,5 +1,6 @@
 package com.nhnacademy.resimanage.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import java.io.Serializable;
 import java.time.LocalDate;
 import javax.persistence.CascadeType;
@@ -30,8 +31,9 @@ public class BirthDeathReportResident {
 
     // 주민과 식별관계 pk, fk, 복합키
     @MapsId("residentSerialNumber")
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "resident_serial_number")
+    @JsonBackReference
     private Resident resident;
 
     @Column(name = "birth_death_report_date")
@@ -67,45 +69,24 @@ public class BirthDeathReportResident {
         private Integer residentSerialNumber;
     }
 
-    @Builder(builderMethodName = "addBirthReportResident")
+    @Builder(builderMethodName = "addBirthDeathReportResident")
     public static BirthDeathReportResident createBirthReportResident(
+        String birthDeathTypecode,
         Integer reportResidentSerialNumber,
         Resident resident,
-        LocalDate birthReportDate,
+        LocalDate birthDeathReportDate,
         String birthReportQualificationsCode,
-        String emailAddress,
-        String phoneNumber) {
-
-        BirthDeathReportResident birthReportResident = new BirthDeathReportResident();
-        birthReportResident.setPk(
-            new Pk("출생", reportResidentSerialNumber, resident.getResidentSerialNumber()));
-        birthReportResident.setResident(resident);
-        birthReportResident.setBirthDeathReportDate(birthReportDate);
-        birthReportResident.setBirthReportQualificationsCode(birthReportQualificationsCode);
-        birthReportResident.setEmailAddress(emailAddress);
-        birthReportResident.setPhoneNumber(phoneNumber);
-
-        return birthReportResident;
-    }
-
-    @Builder(builderMethodName = "addDeathReportResident")
-    public static BirthDeathReportResident createDeathReportResident(
-        Integer reportResidentSerialNumber,
-        Resident resident,
-        LocalDate deathReportDate,
         String deathReportQualificationsCode,
         String emailAddress,
         String phoneNumber) {
-
-        BirthDeathReportResident deathReportResident = new BirthDeathReportResident();
-        deathReportResident.setPk(
-            new Pk("사망", reportResidentSerialNumber, resident.getResidentSerialNumber()));
-        deathReportResident.setResident(resident);
-        deathReportResident.setBirthDeathReportDate(deathReportDate);
-        deathReportResident.setDeathReportQualificationsCode(deathReportQualificationsCode);
-        deathReportResident.setEmailAddress(emailAddress);
-        deathReportResident.setPhoneNumber(phoneNumber);
-
-        return deathReportResident;
+        BirthDeathReportResident birthDeathReportResident = new BirthDeathReportResident();
+        birthDeathReportResident.setPk(new Pk(birthDeathTypecode, reportResidentSerialNumber, resident.getResidentSerialNumber()));
+        birthDeathReportResident.setResident(resident);
+        birthDeathReportResident.setBirthDeathReportDate(birthDeathReportDate);
+        birthDeathReportResident.setBirthReportQualificationsCode(birthReportQualificationsCode);
+        birthDeathReportResident.setDeathReportQualificationsCode(deathReportQualificationsCode);
+        birthDeathReportResident.setEmailAddress(emailAddress);
+        birthDeathReportResident.setPhoneNumber(phoneNumber);
+        return birthDeathReportResident;
     }
 }

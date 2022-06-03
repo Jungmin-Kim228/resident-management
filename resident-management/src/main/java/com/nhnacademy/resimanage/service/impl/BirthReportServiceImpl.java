@@ -33,10 +33,11 @@ public class BirthReportServiceImpl implements BirthReportService {
             residentRepository.getResidentByResidentSerialNumber(request.getResidentSerialNumber());
 
         BirthDeathReportResident birthDeathReportResident =
-            BirthDeathReportResident.addBirthReportResident()
+            BirthDeathReportResident.addBirthDeathReportResident()
+                                    .birthDeathTypecode("출생")
                                     .reportResidentSerialNumber(reportSerialNumber)
                                     .resident(resident)
-                                    .birthReportDate(request.getBirthDeathReportDate())
+                                    .birthDeathReportDate(request.getBirthDeathReportDate())
                                     .birthReportQualificationsCode(
                                         request.getBirthReportQualificationsCode())
                                     .emailAddress(

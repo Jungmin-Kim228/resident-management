@@ -1,0 +1,3 @@
+{
+  "errorMessage": "attempted to assign id from null one-to-one property [com.nhnacademy.resimanage.entity.BirthDeathReportResident.resident]; nested exception is org.hibernate.id.IdentifierGenerationException: attempted to assign id from null one-to-one property [com.nhnacademy.resimanage.entity.BirthDeathReportResident.resident]"
+}
