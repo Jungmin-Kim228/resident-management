@@ -10,27 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ff6fcfe-026e-418d-abf4-18c4cb02d5d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2022-06-02T175606.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2022-06-02T175748.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2022-06-02T181416.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2022-06-02T182216.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2022-06-02T182429.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/BirthDeathReportResident.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/BirthDeathReportResident.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/Resident.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/Resident.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/BirthReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/BirthReportServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/DeathReportServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/DeathReportServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$BirthDeathReportResidentBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$BirthDeathReportResidentBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$Pk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$Pk.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/Resident.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/entity/Resident.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/impl/BirthReportServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/impl/BirthReportServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$BirthDeathReportResidentBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$BirthDeathReportResidentBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$Pk.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident$Pk.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/BirthDeathReportResident.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/Resident.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/entity/Resident.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/impl/BirthReportServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/impl/BirthReportServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/ResidentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/ResidentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/ResidentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/ResidentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/controller/IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/repository/ResidentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/repository/ResidentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/ResidentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/ResidentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/controller/IndexController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/repository/ResidentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/repository/ResidentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/ResidentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/ResidentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/index/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../메모.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../메모.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +36,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTTP Request" />
+        <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -68,11 +64,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/httpfiles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../board-management" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -89,6 +86,9 @@
       <recent name="C:\Users\김정민\nhngit\resident-management\resident-management\src\main\java\com\nhnacademy\resimanage\entity" />
       <recent name="C:\Users\김정민\nhngit\resident-management\resident-management\src\main\java\com\nhnacademy\resimanage\exception" />
       <recent name="C:\Users\김정민\nhngit\resident-management\resident-management\src\main\java\com\nhnacademy\resimanage\controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\김정민\nhngit\resident-management\resident-management\src\main\webapp\WEB-INF\views" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.nhnacademy.resimanage.controller" />
@@ -227,27 +227,11 @@
       <option name="presentableId" value="Default" />
       <updated>1654155968943</updated>
       <workItem from="1654155973639" duration="408000" />
-      <workItem from="1654156659520" duration="31508000" />
+      <workItem from="1654156659520" duration="35235000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/DeathReportServiceImpl.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/DeathReportServiceImpl.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

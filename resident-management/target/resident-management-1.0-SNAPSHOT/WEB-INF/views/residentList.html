@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>주민 목록</title>
+</head>
+<body>
+<h1>주민 목록</h1><hr/>
+<table>
+    <tr>
+        <th>일련번호</th>
+        <th>주민이름</th>
+        <th>가족관계증명서</th>
+        <th>주민등록등본</th>
+        <th>출생신고서</th>
+        <th>사망신고서</th>
+        <th>증명서발급목록</th>
+    </tr>
+    <tr th:each="resident : ${residentList}">
+        <td th:text="${resident.residentSerialNumber}"></td>
+        <td th:text="${resident.name}"></td>
+<!--        here 링크 절대주소라서 컨트롤러 생성하면서 바꿔야함 -->
+        <td><a th:href="@{familyRelationship}"></a>조회</td>
+        <td><a th:href="@{household}"></a>조회</td>
+        <td><a th:href="@{birthReport}"></a>조회</td>
+        <td><a th:href="@{deathReport}"></a>조회</td>
+        <td><a th:href="@{certificationList}"></a>조회</td>
+    </tr>
+</table>
+</body>
+</html>

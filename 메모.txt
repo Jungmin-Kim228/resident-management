@@ -14,3 +14,12 @@ ex) 같은 resident_serial_number(식별자)를 이용해서 rest보내면 덮�
 + 세대구성주민도...?
 
 * 세대구성주민 등록 수정 삭제 없넹..??
+
+암만 생각해도 ex 가족관계
+가족관계 추가 시
+resident = find();
+familyRelationship.setResident(resident);
+resident.getlist().add(familyRelationship);
+save(resident)
+이렇게 하는게 맞는거같은데...
+부모 저장하면 자식 저장되니까?

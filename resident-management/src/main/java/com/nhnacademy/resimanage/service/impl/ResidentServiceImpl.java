@@ -6,6 +6,7 @@ import com.nhnacademy.resimanage.domain.resident.ResidentRequest;
 import com.nhnacademy.resimanage.entity.Resident;
 import com.nhnacademy.resimanage.repository.ResidentRepository;
 import com.nhnacademy.resimanage.service.ResidentService;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,5 +53,10 @@ public class ResidentServiceImpl implements ResidentService {
 
         residentRepository.save(resident);
         return residentRepository.getResidentDtoByResidentSerialNumber(residentSerialNumber);
+    }
+
+    @Override
+    public List<Resident> getAllResidents() {
+        return residentRepository.getAllBy();
     }
 }
