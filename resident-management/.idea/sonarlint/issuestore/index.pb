@@ -7,8 +7,6 @@ l
 <src/main/java/com/nhnacademy/resimanage/domain/ApiError.java,6\2\6206ea5d5ff87ade7154456db3df48e807957b35
 ‚
 Rsrc/main/java/com/nhnacademy/resimanage/domain/resident/ResidentModifyRequest.java,3\5\3543191bc02b06a197a0b5a0bbc01b65a3645fc0
-v
-Fsrc/main/java/com/nhnacademy/resimanage/controller/ControllerBase.java,1\6\16d681445962b051e5922c35fccd31cff611b17e
 €
 Psrc/main/java/com/nhnacademy/resimanage/exception/ResidentNotFoundException.java,c\7\c71733586d69f4ad2b1333a42aee7b8349f9f5db
 
@@ -33,8 +31,6 @@ m
 =src/main/java/com/nhnacademy/resimanage/entity/Household.java,4\3\430deefebc756373e234318ca3fbb28aed80fe59
 €
 Psrc/main/java/com/nhnacademy/resimanage/entity/HouseholdCompositionResident.java,b\8\b85016e83cffdba1b45a1216f2be93e7fc0b8815
-{
-Ksrc/main/java/com/nhnacademy/resimanage/controller/ApiControllerAdvice.java,4\b\4ba29b9d7ef9aa3ec7777def37693e712a21262a
 ~
 Nsrc/main/java/com/nhnacademy/resimanage/service/impl/HouseholdServiceImpl.java,0\e\0e0bdc537d5669594869e7f5f1b4ecdfb2114227
 †
@@ -67,8 +63,6 @@ J
 Rsrc/main/java/com/nhnacademy/resimanage/domain/deathReport/DeathReportRequest.java,8\c\8c6a2aa98b8c843cfd11fb8f193d1024334ac32f
 €
 Psrc/main/java/com/nhnacademy/resimanage/service/impl/DeathReportServiceImpl.java,8\6\867c534aac38b6698291a598b87e456d42430190
-J
-httpfiles/deathReport.http,a\1\a1250f0fc412c9543022455b2f1042aad441e0a2
 ^
 .src/main/webapp/WEB-INF/views/birthReport.html,3\0\30c12a8a7689614e8437e3caa7a72fadcb50e622
 ^
@@ -83,10 +77,6 @@ Lsrc/main/java/com/nhnacademy/resimanage/entity/HouseholdMovementAddress.java,2
 hsrc/main/java/com/nhnacademy/resimanage/domain/householdMovementAddress/HouseholdMovementAddressDto.java,1\a\1a73634694e8dce7135a801d8a31d16f417020f6
 „
 Tsrc/main/java/com/nhnacademy/resimanage/controller/FamilyRelationshipController.java,a\0\a01929afcab5d876a2bfbcb4f43c0973cf09a50d
-v
-Fsrc/main/java/com/nhnacademy/resimanage/controller/HomeController.java,a\8\a8c02362e5494a1bb828235145283d9e02b3397c
-~
-Nsrc/main/java/com/nhnacademy/resimanage/controller/ResidentListController.java,e\a\ea2cda80838e7bfa620980df9b61ea7ed65df6a7
 n
 >src/main/java/com/nhnacademy/resimanage/config/RootConfig.java,8\8\889f2292fe2696c19f4b481b7d46ed263527f10b
 m
@@ -119,8 +109,6 @@ esrc/main/java/com/nhnacademy/resimanage/repository/custom/BirthDeathReportResid
 Ksrc/main/java/com/nhnacademy/resimanage/controller/HouseholdController.java,d\4\d47220c6b12315fed452d05cb1cf527ea8c6b21c
 Š
 Zsrc/main/java/com/nhnacademy/resimanage/controller/HouseholdMovementAddressController.java,3\f\3f64bcadf530f356d155907084686099483a3fc0
-l
-<src/main/java/com/nhnacademy/resimanage/entity/Resident.java,e\2\e20fcd34834eeb17540f5aff3931e1612736f513
 W
 'src/main/webapp/WEB-INF/views/home.html,f\e\fe07acaa7a792b8bb1c6db49795ffbb22dddf91d
 \

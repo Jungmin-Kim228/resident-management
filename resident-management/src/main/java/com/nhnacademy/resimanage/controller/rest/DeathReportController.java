@@ -1,4 +1,4 @@
-package com.nhnacademy.resimanage.controller;
+package com.nhnacademy.resimanage.controller.rest;
 
 import com.nhnacademy.resimanage.domain.Output;
 import com.nhnacademy.resimanage.domain.deathReport.DeathReportDto;

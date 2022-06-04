@@ -7,7 +7,7 @@ Content-Type: application/json
 {
   "residentSerialNumber": 8,
   "birthDeathReportDate": "2012-04-17",
-  "deathReportQualificationsCode": "부",
+  "deathReportQualificationsCode": "비동거친족",
   "emailAddress": null,
   "phoneNumber": "010-1234-4568"
 }
@@ -20,7 +20,7 @@ Content-Type: application/json
 
 {
   "birthDeathReportDate": "2012-04-18",
-  "deathReportQualificationsCode": "부",
+  "deathReportQualificationsCode": "동거친족",
   "emailAddress": "namnam@nav.com",
   "phoneNumber": "010-1122-3344"
 }

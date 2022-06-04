@@ -26,11 +26,31 @@
             <input type="submit" value="조회">
             </form>
         </td>
-        <!--        here 링크 절대주소라서 컨트롤러 생성하면서 바꿔야함 -->
-        <td><a th:href="@{household}"></a>조회</td>
-        <td><a th:href="@{birthReport}"></a>조회</td>
-        <td><a th:href="@{deathReport}"></a>조회</td>
-        <td><a th:href="@{certificationList}"></a>조회</td>
+        <!--        here hidden에 들어가는 num name 등 수정해야함 -->
+        <td>
+            <form th:action="'/householdCertificateView'" method="post">
+                <input type="hidden" name="baseResidentNum" th:value="${resident.residentSerialNumber}">
+                <input type="submit" value="조회">
+            </form>
+        </td>
+        <td th:if="${resident.birthDeathReportResidentList.size() == 2} or (${resident.birthDeathReportResidentList.size() == 1} and ${resident.birthDeathReportResidentList.get(0).getPk().getBirthDeathTypeCode().equals('출생')})">
+            <form th:action="'/birthCertificateView'" method="post">
+                <input type="hidden" name="reportResidentNum" th:value="${resident.residentSerialNumber}">
+                <input type="submit" value="조회">
+            </form>
+        </td>
+        <td th:if="${resident.birthDeathReportResidentList.size() == 2} or (${resident.birthDeathReportResidentList.size() == 1} and ${resident.birthDeathReportResidentList.get(0).getPk().getBirthDeathTypeCode().equals('사망')})">
+            <form th:action="'/deathCertificateView'" method="post">
+                <input type="hidden" name="reportResidentNum" th:value="${resident.residentSerialNumber}">
+                <input type="submit" value="조회">
+            </form>
+        </td>
+        <td>
+            <form th:action="'/certificateRecordView'" method="post">
+                <input type="hidden" name="baseResidentNum" th:value="${resident.residentSerialNumber}">
+                <input type="submit" value="조회">
+            </form>
+        </td>
     </tr>
 </table>
 </body>
