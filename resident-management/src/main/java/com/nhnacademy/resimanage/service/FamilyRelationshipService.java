@@ -1,5 +1,6 @@
 package com.nhnacademy.resimanage.service;
 
+import com.nhnacademy.resimanage.domain.certificate.FamilyCertificateBot;
 import com.nhnacademy.resimanage.domain.familyRelationship.FamilyRelationshipDto;
 import com.nhnacademy.resimanage.domain.familyRelationship.FamilyRelationshipModifyRequest;
 import com.nhnacademy.resimanage.domain.familyRelationship.FamilyRelationshipRequest;
@@ -11,4 +12,6 @@ public interface FamilyRelationshipService {
     FamilyRelationshipDto modifyRelationship(Integer baseResidentSerialNumber, Integer familyResidentSerialNumber, FamilyRelationshipModifyRequest request);
 
     List<Integer> deleteRelationship(Integer baseResidentSerialNumber, Integer familyResidentSerialNumber);
+
+    List<FamilyCertificateBot> findFamilyCertificateBot(Integer baseNum);
 }

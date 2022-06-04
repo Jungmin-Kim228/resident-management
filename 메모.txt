@@ -36,3 +36,6 @@ LocalDate localDate = localDateTime.toLocalDate();
 <a th:href="@{'/familyCertificateView'}"></a>조회
 
 확인번호는 서비스단에서 앞 8자리가 코드에 따라 고정, 뒷 8자리는 0부터 시작
+
+    <td th:text="${#temporals.format(list.createdDatetime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+

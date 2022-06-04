@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>가족관계증명서</title>
 </head>
 <body>
 <h1>가족관계증명서</h1><hr/>
-
+<h3 th:text="${certificate.certificateTypeCode}"></h3>
+<h4 th:text="${certificate.certificateIssueDate}"></h4>
+<h4 th:text="${certificate.certificateConfirmationNumber}"></h4>
+<h4 th:text="${baseResidentBaseAddress}"></h4>
+<table>
+    <tr>
+        <th>구분</th>
+        <th>성명</th>
+        <th>출생연월일</th>
+        <th>주민등록번호</th>
+        <th>성별</th>
+    </tr>
+    <tr>
+        <td th:text="${self.familyRelationshipCode}"></td>
+        <td th:text="${self.name}"></td>
+        <td th:text="${self.birthDate}"></td>
+        <td th:text="${self.residentRegistrationNumber}"></td>
+        <td th:text="${self.genderCode}"></td>
+    </tr>
+    <tr th:each="bot : ${familyCertificateBotList}">
+        <td th:text="${bot.getFamilyRelationshipCode()}"></td>
+        <td th:text="${bot.getName()}"></td>
+        <td th:text="${bot.getBirthDate()}"></td>
+        <td th:text="${bot.getResidentRegistrationNumber()}"></td>
+        <td th:text="${bot.getGenderCode()}"></td>
+    </tr>
+</table>
 </body>
 </html>

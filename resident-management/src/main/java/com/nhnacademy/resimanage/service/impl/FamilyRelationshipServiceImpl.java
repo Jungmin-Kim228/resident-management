@@ -1,5 +1,6 @@
 package com.nhnacademy.resimanage.service.impl;
 
+import com.nhnacademy.resimanage.domain.certificate.FamilyCertificateBot;
 import com.nhnacademy.resimanage.domain.familyRelationship.FamilyRelationshipDto;
 import com.nhnacademy.resimanage.domain.familyRelationship.FamilyRelationshipModifyRequest;
 import com.nhnacademy.resimanage.domain.familyRelationship.FamilyRelationshipRequest;
@@ -79,5 +80,10 @@ public class FamilyRelationshipServiceImpl implements FamilyRelationshipService 
         familyRelationshipRepository.delete(familyRelationship);
 
         return List.of(familyResidentSerialNumber, baseResidentSerialNumber);
+    }
+
+    @Override
+    public List<FamilyCertificateBot> findFamilyCertificateBot(Integer baseNum) {
+        return familyRelationshipRepository.findFamilyCertificateBotByBaseResidentNumber(baseNum);
     }
 }

@@ -3,6 +3,8 @@ package com.nhnacademy.resimanage.controller;
 import static java.time.LocalDate.now;
 
 import com.nhnacademy.resimanage.domain.certificate.FamilyCertificateBot;
+import com.nhnacademy.resimanage.domain.certificate.FamilyCertificateBotSelf;
+import com.nhnacademy.resimanage.entity.CertificateIssue;
 import com.nhnacademy.resimanage.entity.Resident;
 import com.nhnacademy.resimanage.service.CertificateIssueService;
 import com.nhnacademy.resimanage.service.FamilyRelationshipService;
@@ -32,17 +34,24 @@ public class FamilyCertificateController {
     public String prepareView(@RequestParam("baseResidentNum") Integer baseNum, Model model) {
         Resident baseResident = residentService.getResidentBySerialNum(baseNum);
         String registrationBaseAddress = baseResident.getRegistrationBaseAddress();
-
         certificateIssueService.createCertificate(baseResident, "가족관계증명서");
 
-        // here 여기 해야함
-        List<FamilyCertificateBot> familyCertificateBotList = familyRelationshipService.findFamilyRelationshipByBaseResidentNum(baseNum);
+        FamilyCertificateBotSelf self = FamilyCertificateBotSelf.newFamilyBotSelf()
+                                                                .code("본인")
+                                                                .name(baseResident.getName())
+                                                                .birthDate(baseResident.getBirthDate().toLocalDate())
+                                                                .registrationNum(baseResident.getResidentRegistrationNumber())
+                                                                .genderCode(baseResident.getGenderCode())
+                                                                .build();
 
-        return "redirect:/familyCertificateView";
-    }
+        CertificateIssue certificateIssue = certificateIssueService.getLast();
+        List<FamilyCertificateBot> familyCertificateBotList = familyRelationshipService.findFamilyCertificateBot(baseNum);
 
-    @GetMapping("/familyCertificateView")
-    public String executeView() {
+        model.addAttribute("certificate", certificateIssue);
+        model.addAttribute("self", self);
+        model.addAttribute("baseResidentBaseAddress", registrationBaseAddress);
+        model.addAttribute("familyCertificateBotList", familyCertificateBotList);
+
         return "familyRelationship";
     }
 }

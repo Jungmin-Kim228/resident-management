@@ -28,4 +28,23 @@ public class FamilyRelationshipRepositoryImpl extends QuerydslRepositorySupport
                 familyRelationship.familyRelationshipCode))
             .fetchOne();
     }
+
+//    @Override
+//    public List<FamilyCertificateBot> findFamilyCertificateBotByBaseResidentNumber(
+//        Integer baseResidentSerialNumber) {
+//
+//        QFamilyRelationship familyRelationship = QFamilyRelationship.familyRelationship;
+//        QResident familyResident = new QResident("familyResident");
+//
+//        return from(familyRelationship)
+//            .innerJoin(familyResident).on(familyRelationship.pk.familyResidentSerialNumber.eq(familyResident.residentSerialNumber))
+//            .where(familyRelationship.pk.baseResidentSerialNumber.eq(baseResidentSerialNumber))
+//            .select(Projections.bean(FamilyCertificateBot.class,
+//                familyRelationship.familyRelationshipCode,
+//                familyResident.name,
+//                familyResident.birthDate.,
+//                familyResident.residentRegistrationNumber,
+//                familyResident.genderCode))
+//            .fetch();
+//    }
 }

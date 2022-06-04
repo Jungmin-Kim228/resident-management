@@ -1,15 +1,27 @@
 package com.nhnacademy.resimanage.domain.certificate;
 
 import java.time.LocalDate;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
-public class FamilyCertificateBot {
-    String familyRelationshipCode; // familyRelationship
-    String name; // targetResident
-    LocalDate birthDate; // targetResident
-    String residentRegistrationNumber; // targetResident
-    String genderCode; // targetResident
+//@Getter
+//@Setter
+public interface FamilyCertificateBot {
+    String getFamilyRelationshipCode();
+    String getName();
+    String getBirthDate();
+    String getResidentRegistrationNumber();
+    String getGenderCode();
+
+//    @Builder(builderMethodName = "newFamilyBot")
+//    public static FamilyCertificateBot newFamilyCertificateBot(String code, String name,
+//                                                               LocalDate birthDate,
+//                                                               String registrationNum,
+//                                                               String genderCode) {
+//        FamilyCertificateBot familyCertificateBot = new FamilyCertificateBot();
+//        familyCertificateBot.setFamilyRelationshipCode(code);
+//        familyCertificateBot.setName(name);
+//        familyCertificateBot.setBirthDate(birthDate);
+//        familyCertificateBot.setResidentRegistrationNumber(registrationNum);
+//        familyCertificateBot.setGenderCode(genderCode);
+//        return familyCertificateBot;
+//    }
 }
