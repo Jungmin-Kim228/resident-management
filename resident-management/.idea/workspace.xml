@@ -11,20 +11,19 @@
   <component name="ChangeListManager">
     <list default="true" id="7ff6fcfe-026e-418d-abf4-18c4cb02d5d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/ResidentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/ResidentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/CertificateIssue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/CertificateIssue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/HouseholdMovementAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/entity/HouseholdMovementAddress.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/ResidentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/ResidentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/FamilyRelationshipServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/FamilyRelationshipServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/controller/IndexController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/repository/ResidentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/repository/ResidentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/residentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/residentList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/ResidentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/ResidentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/controller/IndexController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/repository/ResidentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/repository/ResidentRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/ResidentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/ResidentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/index/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/residentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/residentList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../메모.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../메모.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,10 +34,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="HTTP Request" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -227,7 +226,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654155968943</updated>
       <workItem from="1654155973639" duration="408000" />
-      <workItem from="1654156659520" duration="35235000" />
+      <workItem from="1654156659520" duration="47777000" />
     </task>
     <servers />
   </component>

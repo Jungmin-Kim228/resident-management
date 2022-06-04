@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -32,4 +33,17 @@ public class CertificateIssue {
 
     @Column(name = "certificate_issue_date")
     private LocalDate certificateIssueDate;
+
+    @Builder(builderMethodName = "addCertificateIssue")
+    public static CertificateIssue createCertificateIssue(
+        Long certificateConfirmationNumber,
+        Resident resident,
+        String certificateTypeCode) {
+        CertificateIssue certificateIssue = new CertificateIssue();
+        certificateIssue.setCertificateConfirmationNumber(certificateConfirmationNumber);
+        certificateIssue.setResident(resident);
+        certificateIssue.setCertificateTypeCode(certificateTypeCode);
+        certificateIssue.setCertificateIssueDate(LocalDate.now());
+        return certificateIssue;
+    }
 }

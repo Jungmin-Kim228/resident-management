@@ -12,4 +12,6 @@ public interface ResidentService {
     ResidentDto modifyResident(Integer residentSerialNumber, ResidentModifyRequest request);
 
     List<Resident> getAllResidents();
+
+    Resident getResidentBySerialNum(Integer residentSerialNumber);
 }

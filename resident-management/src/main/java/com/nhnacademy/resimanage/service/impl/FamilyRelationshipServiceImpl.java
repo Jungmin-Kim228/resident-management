@@ -43,7 +43,7 @@ public class FamilyRelationshipServiceImpl implements FamilyRelationshipService 
         familyRelationshipRepository.save(familyRelationship);
 //        residentRepository.save(baseResident);
 //        here#1 resident에는 persist, familyRelationship에는 persist, merge
-//        here#1 이걸 안해도 resident에 자동으로 familyRelationshipList가 추가될까??
+//        here#1 이걸 안해도 resident에 자동으로 familyRelationshipList가 add 될까??
 
         return familyRelationshipRepository.getFamilyRelationshipDtoByTwoSerialNumber(
             request.getFamilyResidentSerialNumber(), baseResidentSerialNumber);

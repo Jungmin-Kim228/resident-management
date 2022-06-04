@@ -68,6 +68,5 @@ public class HouseholdMovementAddress {
         householdMovementAddress.setHouseMovementAddress(houseMovementAddress);
         householdMovementAddress.setLastAddressYn(lastAddressYn);
         return householdMovementAddress;
-        // here service단에서 lastAddress optional로 기본값 처리하기
     }
 }

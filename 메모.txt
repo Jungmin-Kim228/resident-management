@@ -23,3 +23,16 @@ resident.getlist().add(familyRelationship);
 save(resident)
 이렇게 하는게 맞는거같은데...
 부모 저장하면 자식 저장되니까?
+
+===== 
+가족관계증명서 하면서 든 생각 메모
+
+가족관계증명서 링크 클릭 시
+- 증명서 발급 테이블 추가(발급일, 증명서 확인번호 이때 입력)
+- 본인은 그냥 본인 정보 들고 와서 출력
+
+LocalDate localDate = localDateTime.toLocalDate();
+
+<a th:href="@{'/familyCertificateView'}"></a>조회
+
+확인번호는 서비스단에서 앞 8자리가 코드에 따라 고정, 뒷 8자리는 0부터 시작

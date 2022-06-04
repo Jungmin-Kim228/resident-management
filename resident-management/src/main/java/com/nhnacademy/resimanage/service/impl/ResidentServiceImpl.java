@@ -59,4 +59,9 @@ public class ResidentServiceImpl implements ResidentService {
     public List<Resident> getAllResidents() {
         return residentRepository.getAllBy();
     }
+
+    @Override
+    public Resident getResidentBySerialNum(Integer residentSerialNumber) {
+        return residentRepository.getResidentByResidentSerialNumber(residentSerialNumber);
+    }
 }
