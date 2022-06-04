@@ -7,8 +7,9 @@
 <body>
 <h1>가족관계증명서</h1><hr/>
 <h3 th:text="${certificate.certificateTypeCode}"></h3>
-<h4 th:text="${certificate.certificateConfirmationNumber}"></h4>
 <h4 th:text="${certificate.certificateIssueDate}"></h4>
+<h4 th:text="${certificate.certificateConfirmationNumber}"></h4>
+<h4 th:text="${baseResidentBaseAddress}"></h4>
 <table>
     <tr>
         <th>구분</th>
@@ -32,6 +33,5 @@
         <td th:text="${bot.getGenderCode()}"></td>
     </tr>
 </table>
-<h1 th:text="${baseResidentBaseAddress}"></h1>
 </body>
 </html>
