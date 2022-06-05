@@ -61,4 +61,9 @@ public class CertificateServiceImpl implements CertificateIssueService {
     public BirthDeathReportCertificateTop getBirthReportTop(Resident targetResident) {
         return certificateRepository.getBirthReportTopByTargetResident(targetResident);
     }
+
+    @Override
+    public BirthDeathReportCertificateTop getDeathReportTop(Resident targetResident) {
+        return certificateRepository.getDeathReportTopByTargetResident(targetResident);
+    }
 }

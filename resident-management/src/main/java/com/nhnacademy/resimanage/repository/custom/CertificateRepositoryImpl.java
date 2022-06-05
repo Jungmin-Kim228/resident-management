@@ -29,4 +29,21 @@ public class CertificateRepositoryImpl extends QuerydslRepositorySupport impleme
             .orderBy(certificateIssue.certificateConfirmationNumber.desc())
             .fetchFirst();
     }
+
+    @Override
+    public BirthDeathReportCertificateTop getDeathReportTopByTargetResident(
+        Resident targetResident) {
+        QBirthDeathReportResident birthDeathReportResident = QBirthDeathReportResident.birthDeathReportResident;
+        QCertificateIssue certificateIssue = QCertificateIssue.certificateIssue;
+
+        return from(certificateIssue)
+            .innerJoin(birthDeathReportResident).on(certificateIssue.resident.residentSerialNumber.eq(birthDeathReportResident.resident.residentSerialNumber))
+            .where(certificateIssue.certificateTypeCode.eq("사망신고서"))
+            .where(birthDeathReportResident.pk.residentSerialNumber.eq(targetResident.getResidentSerialNumber()))
+            .select(Projections.bean(BirthDeathReportCertificateTop.class,
+                certificateIssue.certificateTypeCode,
+                birthDeathReportResident.birthDeathReportDate))
+            .orderBy(certificateIssue.certificateConfirmationNumber.desc())
+            .fetchFirst();
+    }
 }

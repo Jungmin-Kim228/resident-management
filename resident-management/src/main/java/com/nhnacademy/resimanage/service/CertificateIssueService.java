@@ -10,4 +10,6 @@ public interface CertificateIssueService {
     CertificateIssue getLast();
 
     BirthDeathReportCertificateTop getBirthReportTop(Resident targetResident);
+
+    BirthDeathReportCertificateTop getDeathReportTop(Resident targetResident);
 }

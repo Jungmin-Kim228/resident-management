@@ -42,7 +42,14 @@ public class BirthDeathCertificateController {
     }
 
     @PostMapping("/deathCertificateView")
-    public String getDeathReport() {
+    public String getDeathReport(@RequestParam("targetResidentNum") Integer targetResidentNum, Model model) {
+        Resident targetResident = residentService.getResidentBySerialNum(targetResidentNum);
+        certificateIssueService.createCertificate(targetResident, "사망신고서");
+
+        BirthDeathReportCertificateTop birthDeathReportCertificateTop = certificateIssueService.getDeathReportTop(targetResident);
+
+        model.addAttribute("birthDeathReportCertificateTop", birthDeathReportCertificateTop);
+
         return "deathReport";
     }
 }
