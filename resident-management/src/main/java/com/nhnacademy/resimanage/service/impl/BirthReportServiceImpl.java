@@ -3,6 +3,7 @@ package com.nhnacademy.resimanage.service.impl;
 import com.nhnacademy.resimanage.domain.birthReport.BirthReportDto;
 import com.nhnacademy.resimanage.domain.birthReport.BirthReportModifyRequest;
 import com.nhnacademy.resimanage.domain.birthReport.BirthReportRequest;
+import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateParent;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateTarget;
 import com.nhnacademy.resimanage.entity.BirthDeathReportResident;
 import com.nhnacademy.resimanage.entity.Resident;
@@ -89,5 +90,10 @@ public class BirthReportServiceImpl implements BirthReportService {
     @Override
     public BirthReportCertificateTarget getBirthReportTarget(Resident targetResident) {
         return birthDeathReportResidentRepository.getBirthReportTargetByTargetResident(targetResident);
+    }
+
+    @Override
+    public List<BirthReportCertificateParent> getBirthReportParent(Resident targetResident) {
+        return birthDeathReportResidentRepository.getBirthReportParentByTargetResident(targetResident);
     }
 }

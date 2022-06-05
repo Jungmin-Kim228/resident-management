@@ -57,8 +57,6 @@ J
 Rsrc/main/java/com/nhnacademy/resimanage/domain/deathReport/DeathReportRequest.java,8\c\8c6a2aa98b8c843cfd11fb8f193d1024334ac32f
 €
 Psrc/main/java/com/nhnacademy/resimanage/service/impl/DeathReportServiceImpl.java,8\6\867c534aac38b6698291a598b87e456d42430190
-d
-4src/main/webapp/WEB-INF/views/certificationList.html,c\7\c7efd6fb0a1fa3feedc816ec5d7f860dc222ce3a
 †
 Vsrc/main/java/com/nhnacademy/resimanage/service/impl/HouseholdMovementServiceImpl.java,f\7\f770a9ed8cdb51b95e32dec2f6190914b8b41547
 |

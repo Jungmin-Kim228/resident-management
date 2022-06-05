@@ -5,10 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class BirthReportReportResident {
+public class BirthReportCertificateParent {
     String name;
     String residentRegistrationNumber;
-    String birthReportQualificationsCode;
-    String emailAddress;
-    String phoneNumber;
 }

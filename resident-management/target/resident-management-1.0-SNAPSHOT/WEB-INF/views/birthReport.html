@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>출생신고서</title>
@@ -26,6 +26,10 @@
         <td th:text="${birthReportCertificateTarget.birthDate}"></td>
         <td th:text="${birthReportCertificateTarget.birthPlaceCode}"></td>
         <td th:text="${birthReportCertificateTarget.registrationBaseAddress}"></td>
+    </tr>
+    <tr th:each="parent : ${birthReportCertificateParent}">
+        <td th:text="${parent.name}"></td>
+        <td th:text="${parent.residentRegistrationNumber}"></td>
     </tr>
 </table>
 </body>

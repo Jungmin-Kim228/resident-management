@@ -1,13 +1,16 @@
 package com.nhnacademy.resimanage.repository.custom;
 
 import com.nhnacademy.resimanage.domain.birthReport.BirthReportDto;
+import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateParent;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateTarget;
 import com.nhnacademy.resimanage.domain.deathReport.DeathReportDto;
 import com.nhnacademy.resimanage.entity.BirthDeathReportResident;
 import com.nhnacademy.resimanage.entity.QBirthDeathReportResident;
+import com.nhnacademy.resimanage.entity.QFamilyRelationship;
 import com.nhnacademy.resimanage.entity.QResident;
 import com.nhnacademy.resimanage.entity.Resident;
 import com.querydsl.core.types.Projections;
+import java.util.List;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 
 public class BirthDeathReportResidentRepositoryImpl extends QuerydslRepositorySupport
@@ -79,5 +82,21 @@ public class BirthDeathReportResidentRepositoryImpl extends QuerydslRepositorySu
                 resident.registrationBaseAddress
                 ))
             .fetchOne();
+    }
+
+    @Override
+    public List<BirthReportCertificateParent> getBirthReportParentByTargetResident(
+        Resident targetResident) {
+        QFamilyRelationship familyRelationship = QFamilyRelationship.familyRelationship;
+        QResident resident =QResident.resident;
+
+        return from(familyRelationship)
+            .innerJoin(resident).on(resident.residentSerialNumber.eq(familyRelationship.pk.familyResidentSerialNumber))
+            .where(familyRelationship.pk.baseResidentSerialNumber.eq(targetResident.getResidentSerialNumber()))
+            .select(Projections.bean(BirthReportCertificateParent.class,
+                resident.name,
+                resident.residentRegistrationNumber))
+            .fetch();
+
     }
 }

@@ -1,12 +1,14 @@
 package com.nhnacademy.resimanage.controller;
 
 import com.nhnacademy.resimanage.domain.certificate.BirthDeathReportCertificateTop;
+import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateParent;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateTarget;
 import com.nhnacademy.resimanage.entity.Resident;
 import com.nhnacademy.resimanage.service.BirthReportService;
 import com.nhnacademy.resimanage.service.CertificateIssueService;
 import com.nhnacademy.resimanage.service.DeathReportService;
 import com.nhnacademy.resimanage.service.ResidentService;
+import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -37,9 +39,11 @@ public class BirthDeathCertificateController {
 
         BirthDeathReportCertificateTop birthDeathReportCertificateTop = certificateIssueService.getBirthReportTop(targetResident);
         BirthReportCertificateTarget birthReportCertificateTarget = birthReportService.getBirthReportTarget(targetResident);
+        List<BirthReportCertificateParent> birthReportCertificateParentList = birthReportService.getBirthReportParent(targetResident);
 
         model.addAttribute("birthDeathReportCertificateTop",birthDeathReportCertificateTop);
         model.addAttribute("birthReportCertificateTarget", birthReportCertificateTarget);
+        model.addAttribute("birthReportCertificateParent", birthReportCertificateParentList);
 
         return "birthReport";
     }
