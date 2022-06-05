@@ -1,0 +1,273 @@
+1. Entity 매핑
+
+2. 연관관계 매핑
+
+3. repository의 쿼리 구현
+- JPARepository에 정의된 method
+- Spring Data JPA Repository의 method 명명규칙 이용
+- @Query를 이용한 JPQL
+- Querydsl를 이용한 Custom Repository
+
+4. Dto 활용
+
+5. pageable 구현 - 조회
+
+6. REST API - jackson library 이용(JSON 요청 응답)
+
+7. thymeleaf html 출력
+
+=========================================
+post, put, delete
+
+주민 등록, 수정, 삭제
+출생신고 등록, 수정, 삭제
+사망신고 등록, 수정, 삭제
+세대 등록, 삭제
+	-> 수정이 복잡하므로 삭제 후 등록으로 대신함
+세대 전입 주소 등록, 수정, 삭제
+
+주민목록
+- 페이징
+- 링크: 가족관계증명서, 주민등록등본, 출생 및 사망신고서(있는경우만), 증명서 발급 목록
+- 개별 주민 삭제 버튼 구현
+
+증명서 발급 목록
+- 페이징
+- 상세 보기 필요없이 목록만 제공
+- 가족관계증명서, 주민등록등본, 출생 및 사망신고서 조회 시 증명서 발급 기록 (???)
+
+주민삭제
+- 해당 주민에 대한 모든 정보 싹다 삭제
+- 세대주는 다른 가족이 없는 경우에만 삭제 가능
+-> 다른 가족 있는데 삭제 요청 한 경우 남은 가족이 있어 삭제 불가능하다는 에러 메시지 출력
+
+=============================================
+
+toString 또는 json 객체 생성 시 무한루프 방지
+@ToString(exclude = "board")
+@JsonIgnore private Board board;
++ 컨트롤러에서 절대 엔티티를 반환하지 않기(entity -> json 무한루프 가능성)
+
+
+등록, 수정 입력 폼이 있는 html 없이...?
+jackson library, rest api, thymeleaf를 엮을 방법...
+
+조회
+@Controller 사용하기 RestController X
+대신 @ResponseBody 사용해서 객체를 json으로 반환하도록 하면 될 것 같음
+
+
+
+=====
+
+* 컨트롤러 구성
+
+1. 주민 자체 정보
+resident controller
+request mapping - /residents
+등록
+POST /residents
+수정
+PUT /residents/{serialNumber}
+
+2. 가족관계
+familyRelship controller
+request mapping - /residents/{serialNumber}/relationship
+등록
+POST /residents/{serialNumber}/relationship
+수정
+PUT /residents/{serialNumber}/relationship/{familySerialNumber}
+삭제
+DELETE /residents/{serialNumber}/relationship/{familySerialNumber}
+
+- serialNumber = 기준 주민 일련번호
+- familySerialNumber = 대상 가족의 주민 일련번호
+
+3. 출생신고
+birthReport controller
+request mapping - /residents/{serialNumber}/birth
+등록
+POST /residents/{serialNumber}/birth
+수정
+PUT /residents/{serialNumber}/birth/{targetSerialNumber}
+삭제
+DELETE /residents/{serialNumber}/birth/{targetSerialNumber}
+
+- serialNumber = 행위자의 주민 일련번호
+- targetSerialNumber = 출생한 사람의 주민 일련번호
+
+4. 사망신고
+deathReport controller
+request mapping - /residents/{serialNumber}/death
+등록
+POST /residents/{serialNumber}/death
+수정
+PUT /residents/{serialNumber}/death/{targetSerialNumber}
+삭제
+DELETE /residents/{serialNumber}/death/{targetSerialnumber}
+
+- {serialNumber} : 행위자의 주민 일련번호
+- {targetSerialNumber}: 사망한 사람의 주민 일련번호
+
+5. 세대
+household controller
+request mapping - /household
+등록
+POST /household
+삭제
+DELETE /household/{householdSerialNumber}
+
+- 세대 구성은 복잡하므로 등록, 삭제만 제공
+- 수정 = 삭제 후 등록
+
+6. 세대 전입 주소
+householdMoveAddr controller
+request mapping - /household/{householdSerialNumber}/movement
+등록
+POST /household/{householdSerialNumber}/movement
+수정
+PUT /household/{householdSerialNumber}/movement/{reportDate}
+삭제
+DELETE /household/{householdSerialNumber}/movement/{reportDate}
+
+- {reportDate} : 전입신고일자 = YYYYMMDD
+
+7. 주민 목록
+index controller
+주민 식별번호
+주민 성명
+주민등록번호
+성별
+출생일시
+등록기준지주소
+가족관계증명서 링크
+주민등록등본 링크
+출생신고서 링크(있으면)
+사망신고서 링크(있으면)
+	-> 출생사망신고서는 대상이 본인일때 있으면 인가? 신고주민이 아니라?
+증명서 발급 목록 링크
+	-> 위 4개 서류 조회시 발급이라 생각하고 기록이 생김
+	-> 목록만 출력
+주민 삭제 버튼
+
+=============================================
+
+* 필요한 쿼리문 (모델링 과제할때 dml참고하기)
+
+1. 가족관계증명서 조회
+1) 상단
+select 증명서발급일, 증명서확인번호, 주민일련번호의 등록기준지
+from 증명서발급
+join 주민
+where 주민.주민일련번호 = 증명서발급.주민일련번호
+
+2) 하단
+select 가족관계코드, 가족주민일련번호의 주민 성명 & 출생일 & 주민등록번호 & 성별
+from 가족관계
+join 주민
+where 주민.주민일련번호 = 기준주민일련번호 인 가족관계 테이블
+
+2. 주민등록등본
+1) 상단
+select 증명서발급일, 증명서확인번호, 세대주주민일련번호, 세대구성일자, 세대구성사유코드
+from 세대
+join 주민, 증명서발급
+where 
+
+2) 중단
+
+3) 하단
+
+3. 출생신고서
+1) 상단
+
+2) 출생자
+
+3) 부모
+
+4) 신고인
+
+4. 사망신고서
+1) 상단
+
+2) 사망자
+
+3) 신고인
+
+5. 증명서발급기록
+
+=======================================================================
+
+//        binding = false가 뭐더라..
+//    @ModelAttribute(value = "resident", binding = false)
+//    public Resident getResident(@PathVariable("serialNumber") Integer serialNumber) {
+//        Resident resident = residentService.getResident(serialNumber);
+//        if (Objects.isNull(resident)) {
+//            throw new ResidentNotFoundException();
+//        }
+//        return resident;
+//    }
+
+=======================================================================
+
+request handler mapping 떄문에 
+페이징 unique 오류
+웹컨피그
+
+?
+자바 코드로 확인하라.
+쿼리2개 분리하고 서비스단에서 값 받아와서 모델에 뿌려준다.
+
+======================================================================
+
+2. 출생신고, 사망신고, 가족관계 식별관계 2줄로 바꾼거 다시 테이블대로 바꾸기...
+3. 사망신고시 주민속성에 사망일시, 사망장소코드, 사망장소주소 넣기(cascade?)
+
+
+
+1. 신고주민 신고한사람? 신고대상인가?
+신고한사람
+
+2. 삭제할때
+나 - 아빠 : 부
+아빠 - 나 : 자녀
+둘다 삭제
+
+
+
+1. auto_increment
+2. 식별관계 2줄 해놓은거
+3. 출생신고,사망신고 까지
+사망신고할때 사망일시,코드,주소 없네?
+
+residents/reportnum/targetnum
+
+request
+
+target repository -> set -> save
+
+
+tostringexclude or
+JsonFacreference? 변환이 되고 다시 주민쪽으로 호출하지 않는다.
+
+부모에 @JsonManagedReference
+자식에 @JsonBackReference
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

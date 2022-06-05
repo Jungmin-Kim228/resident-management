@@ -25,17 +25,17 @@ save(resident)
 부모 저장하면 자식 저장되니까?
 
 ===== 
-가족관계증명서 하면서 든 생각 메모
-
-가족관계증명서 링크 클릭 시
-- 증명서 발급 테이블 추가(발급일, 증명서 확인번호 이때 입력)
-- 본인은 그냥 본인 정보 들고 와서 출력
-
-LocalDate localDate = localDateTime.toLocalDate();
 
 <a th:href="@{'/familyCertificateView'}"></a>조회
 
-확인번호는 서비스단에서 앞 8자리가 코드에 따라 고정, 뒷 8자리는 0부터 시작
+=====
 
-    <td th:text="${#temporals.format(list.createdDatetime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+조건문....
+resident의 birthDeathList는 내가 신고당하면 추가됌
 
+residents.get(0).getBirthDeathReportResidentList().get(0).getPk().getBirthDeathTypeCode()
+
+===
+
+resident의 birthDeathReportResidentList의 size는 잘 체크되는데 조건문이 안통하네
+ th:if="${resident.getBirthDeathReportResidentList().size() == 1} and ${#strings.equals(resident.getBirthDeathReportResidentList().get(0).getPk().getBirthDeathTypeCode(), '출생')}"
