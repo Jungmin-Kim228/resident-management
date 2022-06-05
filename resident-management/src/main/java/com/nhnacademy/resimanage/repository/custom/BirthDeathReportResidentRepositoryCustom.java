@@ -2,6 +2,7 @@ package com.nhnacademy.resimanage.repository.custom;
 
 import com.nhnacademy.resimanage.domain.birthReport.BirthReportDto;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateParent;
+import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateReporter;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateTarget;
 import com.nhnacademy.resimanage.domain.deathReport.DeathReportDto;
 import com.nhnacademy.resimanage.entity.Resident;
@@ -14,7 +15,9 @@ public interface BirthDeathReportResidentRepositoryCustom{
 
     DeathReportDto getDeathReportDtoBySerialNumbers(Integer reportSerialNumber, Integer targetSerialNumber);
 
-    BirthReportCertificateTarget getBirthReportTargetByTargetResident(Resident targetResident);
+    BirthReportCertificateTarget getBirthReportTargetByTargetResident(Integer targetResidentNum);
 
-    List<BirthReportCertificateParent> getBirthReportParentByTargetResident(Resident targetResident);
+    List<BirthReportCertificateParent> getBirthReportParentByTargetResident(Integer targetResidentNum);
+
+    BirthReportCertificateReporter getBirthReportReporterByTargetResident(Integer targetResidentNum);
 }

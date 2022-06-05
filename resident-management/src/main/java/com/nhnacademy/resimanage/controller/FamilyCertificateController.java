@@ -31,7 +31,7 @@ public class FamilyCertificateController {
     public String prepareView(@RequestParam("baseResidentNum") Integer baseNum, Model model) {
         Resident baseResident = residentService.getResidentBySerialNum(baseNum);
         String registrationBaseAddress = baseResident.getRegistrationBaseAddress();
-        certificateIssueService.createCertificate(baseResident, "가족관계증명서");
+        certificateIssueService.createCertificate(baseNum, "가족관계증명서");
 
         FamilyCertificateBotSelf self = FamilyCertificateBotSelf.newFamilyBotSelf()
                                                                 .code("본인")

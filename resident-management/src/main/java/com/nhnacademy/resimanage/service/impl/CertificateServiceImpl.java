@@ -4,6 +4,7 @@ import com.nhnacademy.resimanage.domain.certificate.BirthDeathReportCertificateT
 import com.nhnacademy.resimanage.entity.CertificateIssue;
 import com.nhnacademy.resimanage.entity.Resident;
 import com.nhnacademy.resimanage.repository.CertificateRepository;
+import com.nhnacademy.resimanage.repository.ResidentRepository;
 import com.nhnacademy.resimanage.service.CertificateIssueService;
 import org.springframework.stereotype.Service;
 
@@ -15,15 +16,20 @@ public class CertificateServiceImpl implements CertificateIssueService {
     private long deathReportNumber = 9999999900000000L;
 
     private final CertificateRepository certificateRepository;
+    private final ResidentRepository residentRepository;
 
-    public CertificateServiceImpl(CertificateRepository certificateRepository) {
+    public CertificateServiceImpl(CertificateRepository certificateRepository,
+                                  ResidentRepository residentRepository) {
         this.certificateRepository = certificateRepository;
+        this.residentRepository = residentRepository;
     }
 
     @Override
-    public void createCertificate(Resident resident, String typeCode) {
-        CertificateIssue certificateIssue;
+    public void createCertificate(Integer residentNum, String typeCode) {
+        Resident resident = residentRepository.getResidentByResidentSerialNumber(residentNum);
         Long confirmationNumber = certificateRepository.getCount();
+        CertificateIssue certificateIssue;
+
         if (typeCode.equals("가족관계증명서")) {
             certificateIssue = CertificateIssue.addCertificateIssue()
                 .resident(resident)
@@ -58,12 +64,12 @@ public class CertificateServiceImpl implements CertificateIssueService {
     }
 
     @Override
-    public BirthDeathReportCertificateTop getBirthReportTop(Resident targetResident) {
-        return certificateRepository.getBirthReportTopByTargetResident(targetResident);
+    public BirthDeathReportCertificateTop getBirthReportTop(Integer targetResidentNum) {
+        return certificateRepository.getBirthReportTopByTargetResident(targetResidentNum);
     }
 
     @Override
-    public BirthDeathReportCertificateTop getDeathReportTop(Resident targetResident) {
-        return certificateRepository.getDeathReportTopByTargetResident(targetResident);
+    public BirthDeathReportCertificateTop getDeathReportTop(Integer targetResidentNum) {
+        return certificateRepository.getDeathReportTopByTargetResident(targetResidentNum);
     }
 }

@@ -4,6 +4,7 @@ import com.nhnacademy.resimanage.domain.birthReport.BirthReportDto;
 import com.nhnacademy.resimanage.domain.birthReport.BirthReportModifyRequest;
 import com.nhnacademy.resimanage.domain.birthReport.BirthReportRequest;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateParent;
+import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateReporter;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateTarget;
 import com.nhnacademy.resimanage.entity.BirthDeathReportResident;
 import com.nhnacademy.resimanage.entity.Resident;
@@ -88,12 +89,17 @@ public class BirthReportServiceImpl implements BirthReportService {
     }
 
     @Override
-    public BirthReportCertificateTarget getBirthReportTarget(Resident targetResident) {
-        return birthDeathReportResidentRepository.getBirthReportTargetByTargetResident(targetResident);
+    public BirthReportCertificateTarget getBirthReportTarget(Integer targetResidentNum) {
+        return birthDeathReportResidentRepository.getBirthReportTargetByTargetResident(targetResidentNum);
     }
 
     @Override
-    public List<BirthReportCertificateParent> getBirthReportParent(Resident targetResident) {
-        return birthDeathReportResidentRepository.getBirthReportParentByTargetResident(targetResident);
+    public List<BirthReportCertificateParent> getBirthReportParent(Integer targetResidentNum) {
+        return birthDeathReportResidentRepository.getBirthReportParentByTargetResident(targetResidentNum);
+    }
+
+    @Override
+    public BirthReportCertificateReporter getBirthReportReporter(Integer targetResidentNum) {
+        return birthDeathReportResidentRepository.getBirthReportReporterByTargetResident(targetResidentNum);
     }
 }

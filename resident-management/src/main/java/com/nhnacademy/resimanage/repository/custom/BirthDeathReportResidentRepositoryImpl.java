@@ -2,6 +2,7 @@ package com.nhnacademy.resimanage.repository.custom;
 
 import com.nhnacademy.resimanage.domain.birthReport.BirthReportDto;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateParent;
+import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateReporter;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateTarget;
 import com.nhnacademy.resimanage.domain.deathReport.DeathReportDto;
 import com.nhnacademy.resimanage.entity.BirthDeathReportResident;
@@ -65,7 +66,7 @@ public class BirthDeathReportResidentRepositoryImpl extends QuerydslRepositorySu
 
     @Override
     public BirthReportCertificateTarget getBirthReportTargetByTargetResident(
-        Resident targetResident) {
+        Integer targetResidentNum) {
         QBirthDeathReportResident birthDeathReportResident = QBirthDeathReportResident.birthDeathReportResident;
         QResident resident = QResident.resident;
 
@@ -73,7 +74,7 @@ public class BirthDeathReportResidentRepositoryImpl extends QuerydslRepositorySu
         return from(resident)
             .innerJoin(birthDeathReportResident).on(birthDeathReportResident.pk.residentSerialNumber.eq(resident.residentSerialNumber))
             .where(birthDeathReportResident.pk.birthDeathTypeCode.eq("출생"))
-            .where(birthDeathReportResident.pk.residentSerialNumber.eq(targetResident.getResidentSerialNumber()))
+            .where(birthDeathReportResident.pk.residentSerialNumber.eq(targetResidentNum))
             .select(Projections.bean(BirthReportCertificateTarget.class,
                 resident.name,
                 resident.genderCode,
@@ -86,17 +87,36 @@ public class BirthDeathReportResidentRepositoryImpl extends QuerydslRepositorySu
 
     @Override
     public List<BirthReportCertificateParent> getBirthReportParentByTargetResident(
-        Resident targetResident) {
+        Integer targetResidentNum) {
         QFamilyRelationship familyRelationship = QFamilyRelationship.familyRelationship;
         QResident resident =QResident.resident;
 
         return from(familyRelationship)
             .innerJoin(resident).on(resident.residentSerialNumber.eq(familyRelationship.pk.familyResidentSerialNumber))
-            .where(familyRelationship.pk.baseResidentSerialNumber.eq(targetResident.getResidentSerialNumber()))
+            .where(familyRelationship.pk.baseResidentSerialNumber.eq(targetResidentNum))
             .select(Projections.bean(BirthReportCertificateParent.class,
+                familyRelationship.familyRelationshipCode,
                 resident.name,
                 resident.residentRegistrationNumber))
             .fetch();
+    }
 
+    @Override
+    public BirthReportCertificateReporter getBirthReportReporterByTargetResident(
+        Integer targetResidentNum) {
+        QBirthDeathReportResident birthDeathReportResident = QBirthDeathReportResident.birthDeathReportResident;
+        QResident resident = QResident.resident;
+
+        return from(resident)
+            .innerJoin(birthDeathReportResident).on(resident.residentSerialNumber.eq(birthDeathReportResident.pk.reportResidentSerialNumber))
+            .where(birthDeathReportResident.pk.residentSerialNumber.eq(targetResidentNum))
+            .where(birthDeathReportResident.pk.birthDeathTypeCode.eq("출생"))
+            .select(Projections.bean(BirthReportCertificateReporter.class,
+                resident.name,
+                resident.residentRegistrationNumber,
+                birthDeathReportResident.birthReportQualificationsCode,
+                birthDeathReportResident.emailAddress,
+                birthDeathReportResident.phoneNumber))
+            .fetchOne();
     }
 }

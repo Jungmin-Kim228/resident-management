@@ -6,6 +6,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class BirthReportCertificateParent {
+    String familyRelationshipCode;
     String name;
     String residentRegistrationNumber;
 }

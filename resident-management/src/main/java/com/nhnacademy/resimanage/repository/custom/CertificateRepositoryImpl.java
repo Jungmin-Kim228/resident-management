@@ -4,7 +4,6 @@ import com.nhnacademy.resimanage.domain.certificate.BirthDeathReportCertificateT
 import com.nhnacademy.resimanage.entity.CertificateIssue;
 import com.nhnacademy.resimanage.entity.QBirthDeathReportResident;
 import com.nhnacademy.resimanage.entity.QCertificateIssue;
-import com.nhnacademy.resimanage.entity.Resident;
 import com.querydsl.core.types.Projections;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 
@@ -15,14 +14,14 @@ public class CertificateRepositoryImpl extends QuerydslRepositorySupport impleme
 
     @Override
     public BirthDeathReportCertificateTop getBirthReportTopByTargetResident(
-        Resident targetResident) {
+        Integer targetResidentNum) {
         QBirthDeathReportResident birthDeathReportResident = QBirthDeathReportResident.birthDeathReportResident;
         QCertificateIssue certificateIssue = QCertificateIssue.certificateIssue;
 
         return from(certificateIssue)
             .innerJoin(birthDeathReportResident).on(certificateIssue.resident.residentSerialNumber.eq(birthDeathReportResident.resident.residentSerialNumber))
             .where(certificateIssue.certificateTypeCode.eq("출생신고서"))
-            .where(birthDeathReportResident.pk.residentSerialNumber.eq(targetResident.getResidentSerialNumber()))
+            .where(birthDeathReportResident.pk.residentSerialNumber.eq(targetResidentNum))
             .select(Projections.bean(BirthDeathReportCertificateTop.class,
                 certificateIssue.certificateTypeCode,
                 birthDeathReportResident.birthDeathReportDate))
@@ -32,14 +31,14 @@ public class CertificateRepositoryImpl extends QuerydslRepositorySupport impleme
 
     @Override
     public BirthDeathReportCertificateTop getDeathReportTopByTargetResident(
-        Resident targetResident) {
+        Integer targetResidentNum) {
         QBirthDeathReportResident birthDeathReportResident = QBirthDeathReportResident.birthDeathReportResident;
         QCertificateIssue certificateIssue = QCertificateIssue.certificateIssue;
 
         return from(certificateIssue)
             .innerJoin(birthDeathReportResident).on(certificateIssue.resident.residentSerialNumber.eq(birthDeathReportResident.resident.residentSerialNumber))
             .where(certificateIssue.certificateTypeCode.eq("사망신고서"))
-            .where(birthDeathReportResident.pk.residentSerialNumber.eq(targetResident.getResidentSerialNumber()))
+            .where(birthDeathReportResident.pk.residentSerialNumber.eq(targetResidentNum))
             .select(Projections.bean(BirthDeathReportCertificateTop.class,
                 certificateIssue.certificateTypeCode,
                 birthDeathReportResident.birthDeathReportDate))

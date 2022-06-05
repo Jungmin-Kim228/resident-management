@@ -2,6 +2,7 @@ package com.nhnacademy.resimanage.controller;
 
 import com.nhnacademy.resimanage.domain.certificate.BirthDeathReportCertificateTop;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateParent;
+import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateReporter;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateTarget;
 import com.nhnacademy.resimanage.entity.Resident;
 import com.nhnacademy.resimanage.service.BirthReportService;
@@ -34,26 +35,26 @@ public class BirthDeathCertificateController {
 
     @PostMapping("/birthCertificateView")
     public String getBirthReport(@RequestParam("targetResidentNum") Integer targetResidentNum, Model model) {
-        Resident targetResident = residentService.getResidentBySerialNum(targetResidentNum);
-        certificateIssueService.createCertificate(targetResident, "출생신고서");
+        certificateIssueService.createCertificate(targetResidentNum, "출생신고서");
 
-        BirthDeathReportCertificateTop birthDeathReportCertificateTop = certificateIssueService.getBirthReportTop(targetResident);
-        BirthReportCertificateTarget birthReportCertificateTarget = birthReportService.getBirthReportTarget(targetResident);
-        List<BirthReportCertificateParent> birthReportCertificateParentList = birthReportService.getBirthReportParent(targetResident);
+        BirthDeathReportCertificateTop birthDeathReportCertificateTop = certificateIssueService.getBirthReportTop(targetResidentNum);
+        BirthReportCertificateTarget birthReportCertificateTarget = birthReportService.getBirthReportTarget(targetResidentNum);
+        List<BirthReportCertificateParent> birthReportCertificateParentList = birthReportService.getBirthReportParent(targetResidentNum);
+        BirthReportCertificateReporter birthReportCertificateReporter = birthReportService.getBirthReportReporter(targetResidentNum);
 
         model.addAttribute("birthDeathReportCertificateTop",birthDeathReportCertificateTop);
         model.addAttribute("birthReportCertificateTarget", birthReportCertificateTarget);
         model.addAttribute("birthReportCertificateParent", birthReportCertificateParentList);
+        model.addAttribute("birthReportCertificateReporter", birthReportCertificateReporter);
 
         return "birthReport";
     }
 
     @PostMapping("/deathCertificateView")
     public String getDeathReport(@RequestParam("targetResidentNum") Integer targetResidentNum, Model model) {
-        Resident targetResident = residentService.getResidentBySerialNum(targetResidentNum);
-        certificateIssueService.createCertificate(targetResident, "사망신고서");
+        certificateIssueService.createCertificate(targetResidentNum, "사망신고서");
 
-        BirthDeathReportCertificateTop birthDeathReportCertificateTop = certificateIssueService.getDeathReportTop(targetResident);
+        BirthDeathReportCertificateTop birthDeathReportCertificateTop = certificateIssueService.getDeathReportTop(targetResidentNum);
 
         model.addAttribute("birthDeathReportCertificateTop", birthDeathReportCertificateTop);
 
