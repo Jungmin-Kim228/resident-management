@@ -47,8 +47,6 @@ G
 Xsrc/main/java/com/nhnacademy/resimanage/domain/birthReport/BirthReportModifyRequest.java,d\1\d18a28c10d136948d9ae56a2fc3063a7afd77f37
 ‚
 Rsrc/main/java/com/nhnacademy/resimanage/domain/birthReport/BirthReportRequest.java,1\f\1ff1f3a24b60a46cd47b16a441dc0ef66bb96a11
-—
-gsrc/main/java/com/nhnacademy/resimanage/repository/custom/BirthDeathReportResidentRepositoryCustom.java,2\0\2012e8c5a05c0f7c0600acc0640c4acbaf464414
 w
 Gsrc/main/java/com/nhnacademy/resimanage/service/DeathReportService.java,c\c\cc2c912942a175de73470193813f5f51257b1bf9
 ˆ
@@ -77,14 +75,8 @@ m
 Lsrc/main/java/com/nhnacademy/resimanage/domain/resident/ResidentRequest.java,0\5\052797810b114678f3a594b57201f917f63d4827
 ~
 Nsrc/main/java/com/nhnacademy/resimanage/domain/deathReport/DeathReportDto.java,4\e\4ebb854533c521f7fa3f4177ed8de67f681e0602
-t
-Dsrc/main/java/com/nhnacademy/resimanage/service/ResidentService.java,f\f\ff54197f6ba24c39fe52bade511b02d9edf49932
 }
 Msrc/main/java/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.java,4\d\4d2899436818567f6115c5f2c23019ad3b5bfa44
-€
-Psrc/main/java/com/nhnacademy/resimanage/service/impl/BirthReportServiceImpl.java,5\4\540727d35a495673421e1baa14b631fb81eed9fc
-W
-'src/main/webapp/WEB-INF/views/home.html,f\e\fe07acaa7a792b8bb1c6db49795ffbb22dddf91d
 \
 ,src/main/webapp/WEB-INF/views/household.html,b\d\bd4deb10b1577c5f29068074604e37df4db29ba1
 Œ

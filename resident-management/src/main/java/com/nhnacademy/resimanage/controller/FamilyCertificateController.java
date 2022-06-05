@@ -44,6 +44,7 @@ public class FamilyCertificateController {
         CertificateIssue certificateIssue = certificateIssueService.getLast();
         List<FamilyCertificateBot> familyCertificateBotList = familyRelationshipService.findFamilyCertificateBot(baseNum);
 
+        // here 여기 certificateIssue entity를 그대로 반환하고 있음. dto를 반환하도록 했어야 하는데..
         model.addAttribute("certificate", certificateIssue);
         model.addAttribute("self", self);
         model.addAttribute("baseResidentBaseAddress", registrationBaseAddress);
