@@ -64,3 +64,34 @@ from resident R
 inner join birth_death_report_resident BD on R.resident_serial_number = BD.resident_serial_number
 where BD.birth_death_type_code = '사망'
 and R.resident_serial_number = 1;
+
+-- 사망신고서 신고인 파트
+select R.name, R.resident_registration_number, BD.death_report_qualifications_code, BD.email_address, BD.phone_number
+from resident R
+inner join birth_death_report_resident BD on R.resident_serial_number = BD.report_resident_serial_number
+where BD.birth_death_type_code = '사망'
+and BD.resident_serial_number = 1;
+
+-- 증명서 발급 기록
+select C.certificate_confirmation_number, C.certificate_type_code, C.certificate_issue_date
+from certificate_issue C
+where C.resident_serial_number = 4;
+
+-- 주민등록등본 상단
+select C.certificate_type_code, C.certificate_issue_date, C.certificate_confirmation_number
+from certificate_issue C
+where C.resident_serial_number = 4
+and C.certificate_type_code = '주민등록등본'
+order by C.certificate_issue_date desc limit 1;
+
+-- 주민등록등본 세대주 파트
+select R.name, H.household_composition_reason_code, H.household_composition_date
+from resident R
+inner join household H on H.household_resident_serial_number = R.resident_serial_number
+where H.household_serial_number = 1;
+
+-- 주민등록등본 주소 파트
+select HM.last_address_yn, HM.house_movement_address, HM.house_movement_report_date
+from household_movement_address HM
+where HM.household_serial_number = 1
+order by HM.house_movement_report_date desc;

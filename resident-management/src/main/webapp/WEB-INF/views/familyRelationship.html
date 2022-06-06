@@ -7,8 +7,10 @@
 <body>
 <h1>가족관계증명서</h1><hr/>
 <h3 th:text="${certificate.certificateTypeCode}"></h3>
-<h4 th:text="${certificate.certificateIssueDate}"></h4>
-<h4 th:text="${certificate.certificateConfirmationNumber}"></h4>
+<span>발급일 : </span>
+<span th:text="${certificate.certificateIssueDate}"></span>
+<span>증명서확인번호</span>
+<span th:text="${certificate.certificateConfirmationNumber}"></span>
 <h4 th:text="${baseResidentBaseAddress}"></h4>
 <table border="1">
     <tr>

@@ -10,16 +10,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ff6fcfe-026e-418d-abf4-18c4cb02d5d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4d2899436818567f6115c5f2c23019ad3b5bfa44" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../basequery.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../basequery.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../querys.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../querys.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a2a8c9d49726064f8e49764e788eff134a66fd1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/e/0e0bdc537d5669594869e7f5f1b4ecdfb2114227" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/32cda107da83268070edf5b5fa5d1d60903a4853" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/76d4d2d2ba4e260b6b637fe9abe58dd20bfcdd4f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd4deb10b1577c5f29068074604e37df4db29ba1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/CertificateRecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/CertificateRecordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/CertificateRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/CertificateRepositoryCustom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/CertificateRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/CertificateRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/CertificateIssueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/CertificateIssueService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/CertificateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/CertificateServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/certificationList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/certificationList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/BirthDeathCertificateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/BirthDeathCertificateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/HouseholdCertificateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/controller/HouseholdCertificateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryCustom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryCustom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/HouseholdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/HouseholdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/HouseholdServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nhnacademy/resimanage/service/impl/HouseholdServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/familyRelationship.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/familyRelationship.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/household.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/household.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/residentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/residentList.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/controller/BirthDeathCertificateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/controller/BirthDeathCertificateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/controller/HouseholdCertificateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/controller/HouseholdCertificateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryCustom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/HouseholdService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/HouseholdService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/impl/HouseholdServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/nhnacademy/resimanage/service/impl/HouseholdServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/controller/BirthDeathCertificateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/controller/BirthDeathCertificateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/controller/HouseholdCertificateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/controller/HouseholdCertificateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryCustom.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryCustom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/repository/custom/HouseholdRepositoryImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/HouseholdService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/HouseholdService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/impl/HouseholdServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/classes/com/nhnacademy/resimanage/service/impl/HouseholdServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/familyRelationship.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/familyRelationship.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/household.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/household.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/residentList.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/resident-management-1.0-SNAPSHOT/WEB-INF/views/residentList.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +94,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../board-management" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/nhn_0523" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />

@@ -98,7 +98,7 @@ commit;
 
 -- 4. birth_death_report_resident 테이블 데이터 추가
 insert into birth_death_report_resident values (7, '출생', 4, '20120317', '부', null, 'nam@nhnad.co.kr', '010-1234-5678');
-insert into birth_death_report_resident values (1, '사망', 2, '20200502', '비동거친족', null, null, '010-2345-6789');
+insert into birth_death_report_resident values (1, '사망', 2, '20200502', null, '비동거친족', null, '010-2345-6789');
 
 commit;
 
@@ -160,3 +160,9 @@ select * from household;
 select * from household_composition_resident;
 select * from household_movement_address;
 select * from resident;
+
+-- 주민등록등본 세대주관계 파트
+select HC.household_relationship_code, R.name, R.resident_registration_number, HC.report_date, HC.household_composition_change_reason_code
+from household_composition_resident HC
+inner join resident R on R.resident_serial_number = HC.resident_serial_number
+where HC.household_serial_number = 1;

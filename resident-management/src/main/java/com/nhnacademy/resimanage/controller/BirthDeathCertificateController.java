@@ -6,11 +6,9 @@ import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateReport
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateTarget;
 import com.nhnacademy.resimanage.domain.certificate.DeathReportCertificateReporter;
 import com.nhnacademy.resimanage.domain.certificate.DeathReportCertificateTarget;
-import com.nhnacademy.resimanage.entity.Resident;
 import com.nhnacademy.resimanage.service.BirthReportService;
 import com.nhnacademy.resimanage.service.CertificateIssueService;
 import com.nhnacademy.resimanage.service.DeathReportService;
-import com.nhnacademy.resimanage.service.ResidentService;
 import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,17 +20,14 @@ public class BirthDeathCertificateController {
     private final BirthReportService birthReportService;
     private final DeathReportService deathReportService;
     private final CertificateIssueService certificateIssueService;
-    private final ResidentService residentService;
 
     public BirthDeathCertificateController(
         BirthReportService birthReportService,
         DeathReportService deathReportService,
-        CertificateIssueService certificateIssueService,
-        ResidentService residentService) {
+        CertificateIssueService certificateIssueService) {
         this.birthReportService = birthReportService;
         this.deathReportService = deathReportService;
         this.certificateIssueService = certificateIssueService;
-        this.residentService = residentService;
     }
 
     @PostMapping("/birthCertificateView")
