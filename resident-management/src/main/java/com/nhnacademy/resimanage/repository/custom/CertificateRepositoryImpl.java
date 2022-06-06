@@ -1,10 +1,13 @@
 package com.nhnacademy.resimanage.repository.custom;
 
 import com.nhnacademy.resimanage.domain.certificate.BirthDeathReportCertificateTop;
+import com.nhnacademy.resimanage.domain.certificate.CertificateRecord;
 import com.nhnacademy.resimanage.entity.CertificateIssue;
 import com.nhnacademy.resimanage.entity.QBirthDeathReportResident;
 import com.nhnacademy.resimanage.entity.QCertificateIssue;
+import com.nhnacademy.resimanage.entity.QResident;
 import com.querydsl.core.types.Projections;
+import java.util.List;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 
 public class CertificateRepositoryImpl extends QuerydslRepositorySupport implements CertificateRepositoryCustom {
@@ -47,4 +50,18 @@ public class CertificateRepositoryImpl extends QuerydslRepositorySupport impleme
             .orderBy(certificateIssue.certificateConfirmationNumber.desc())
             .fetchFirst();
     }
+
+    @Override
+    public List<CertificateRecord> getCertificateRecodeByResident(Integer residentNum) {
+        QCertificateIssue certificateIssue = QCertificateIssue.certificateIssue;
+
+        return from(certificateIssue)
+            .where(certificateIssue.resident.residentSerialNumber.eq(residentNum))
+            .select(Projections.bean(CertificateRecord.class,
+                certificateIssue.certificateConfirmationNumber,
+                certificateIssue.certificateTypeCode,
+                certificateIssue.certificateIssueDate))
+            .fetch();
+    }
+
 }

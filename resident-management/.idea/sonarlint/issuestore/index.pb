@@ -67,8 +67,6 @@ m
 Lsrc/main/java/com/nhnacademy/resimanage/domain/resident/ResidentRequest.java,0\5\052797810b114678f3a594b57201f917f63d4827
 ~
 Nsrc/main/java/com/nhnacademy/resimanage/domain/deathReport/DeathReportDto.java,4\e\4ebb854533c521f7fa3f4177ed8de67f681e0602
-}
-Msrc/main/java/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.java,4\d\4d2899436818567f6115c5f2c23019ad3b5bfa44
 \
 ,src/main/webapp/WEB-INF/views/household.html,b\d\bd4deb10b1577c5f29068074604e37df4db29ba1
 Œ

@@ -48,7 +48,7 @@
         </td>
         <td>
             <form th:action="'/certificateRecordView'" method="post">
-                <input type="hidden" name="baseResidentNum" th:value="${resident.residentSerialNumber}">
+                <input type="hidden" name="residentNum" th:value="${resident.residentSerialNumber}">
                 <input type="submit" value="조회">
             </form>
         </td>

@@ -1,11 +1,13 @@
 package com.nhnacademy.resimanage.service.impl;
 
 import com.nhnacademy.resimanage.domain.certificate.BirthDeathReportCertificateTop;
+import com.nhnacademy.resimanage.domain.certificate.CertificateRecord;
 import com.nhnacademy.resimanage.entity.CertificateIssue;
 import com.nhnacademy.resimanage.entity.Resident;
 import com.nhnacademy.resimanage.repository.CertificateRepository;
 import com.nhnacademy.resimanage.repository.ResidentRepository;
 import com.nhnacademy.resimanage.service.CertificateIssueService;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -71,5 +73,10 @@ public class CertificateServiceImpl implements CertificateIssueService {
     @Override
     public BirthDeathReportCertificateTop getDeathReportTop(Integer targetResidentNum) {
         return certificateRepository.getDeathReportTopByTargetResident(targetResidentNum);
+    }
+
+    @Override
+    public List<CertificateRecord> getCertificateRecord(Integer residentNum) {
+        return certificateRepository.getCertificateRecodeByResident(residentNum);
     }
 }

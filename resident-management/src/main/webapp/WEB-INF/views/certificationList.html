@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>증명서발급목록</title>
 </head>
 <body>
 <h1>증명서발급목록</h1><hr/>
+<table border="1">
+    <tr>
+        <th>증명서확인번호</th>
+        <th>증명서유형코드</th>
+        <th>증명서발급일자</th>
+    </tr>
+    <tr th:each="record : ${certificateRecord}">
+        <td th:text="${record.certificateConfirmationNumber}"></td>
+        <td th:text="${record.certificateTypeCode}"></td>
+        <td th:text="${record.certificateIssueDate}"></td>
+    </tr>
+</table>
 </body>
 </html>
