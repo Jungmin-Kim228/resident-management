@@ -22,6 +22,7 @@ public class CertificateRepositoryImpl extends QuerydslRepositorySupport impleme
             .innerJoin(birthDeathReportResident).on(certificateIssue.resident.residentSerialNumber.eq(birthDeathReportResident.resident.residentSerialNumber))
             .where(certificateIssue.certificateTypeCode.eq("출생신고서"))
             .where(birthDeathReportResident.pk.residentSerialNumber.eq(targetResidentNum))
+            .where(birthDeathReportResident.pk.birthDeathTypeCode.eq("출생"))
             .select(Projections.bean(BirthDeathReportCertificateTop.class,
                 certificateIssue.certificateTypeCode,
                 birthDeathReportResident.birthDeathReportDate))
@@ -39,6 +40,7 @@ public class CertificateRepositoryImpl extends QuerydslRepositorySupport impleme
             .innerJoin(birthDeathReportResident).on(certificateIssue.resident.residentSerialNumber.eq(birthDeathReportResident.resident.residentSerialNumber))
             .where(certificateIssue.certificateTypeCode.eq("사망신고서"))
             .where(birthDeathReportResident.pk.residentSerialNumber.eq(targetResidentNum))
+            .where(birthDeathReportResident.pk.birthDeathTypeCode.eq("사망"))
             .select(Projections.bean(BirthDeathReportCertificateTop.class,
                 certificateIssue.certificateTypeCode,
                 birthDeathReportResident.birthDeathReportDate))

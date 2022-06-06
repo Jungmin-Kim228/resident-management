@@ -9,8 +9,44 @@
 <h2 th:text="${birthDeathReportCertificateTop.getCertificateTypeCode()}"></h2>
 <span>신고일 : </span>
 <span th:text="${birthDeathReportCertificateTop.getBirthDeathReportDate()}"></span><br/>
-<table>
-
+<table border="1">
+    <tr>
+        <th rowspan="4">사망자</th>
+        <th colspan="2">성명</th>
+        <td th:text="${deathReportCertificateTarget.name}"></td>
+        <th>주민등록번호</th>
+        <td th:text="${deathReportCertificateTarget.residentRegistrationNumber}"></td>
+    </tr>
+    <tr>
+        <th colspan="2">사망일시</th>
+        <td colspan="3" th:text="${deathReportCertificateTarget.deathDate}"></td>
+    </tr>
+    <tr>
+        <th rowspan="2">사망장소</th>
+        <th>구분</th>
+        <td colspan="3" th:text="${deathReportCertificateTarget.deathPlaceCode}"></td>
+    </tr>
+    <tr>
+        <th>주소</th>
+        <td colspan="3" th:text="${deathReportCertificateTarget.deathPlaceAddress}"></td>
+    </tr>
+    <tr>
+        <th rowspan="3">신고인</th>
+        <th colspan="2">성명</th>
+        <td th:text="${deathReportCertificateReporter.name}"></td>
+        <th>주민등록번호</th>
+        <td th:text="${deathReportCertificateReporter.residentRegistrationNumber}"></td>
+    </tr>
+    <tr>
+        <th colspan="2">자격</th>
+        <td colspan="3" th:text="${deathReportCertificateReporter.deathReportQualificationsCode}"></td>
+    </tr>
+    <tr>
+        <th colspan="2">이메일</th>
+        <td th:text="${deathReportCertificateReporter.emailAddress}"></td>
+        <th>전화번호</th>
+        <td th:text="${deathReportCertificateReporter.phoneNumber}"></td>
+    </tr>
 </table>
 </body>
 </html>

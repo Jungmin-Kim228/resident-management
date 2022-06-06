@@ -4,6 +4,8 @@ import com.nhnacademy.resimanage.domain.certificate.BirthDeathReportCertificateT
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateParent;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateReporter;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateTarget;
+import com.nhnacademy.resimanage.domain.certificate.DeathReportCertificateReporter;
+import com.nhnacademy.resimanage.domain.certificate.DeathReportCertificateTarget;
 import com.nhnacademy.resimanage.entity.Resident;
 import com.nhnacademy.resimanage.service.BirthReportService;
 import com.nhnacademy.resimanage.service.CertificateIssueService;
@@ -55,8 +57,12 @@ public class BirthDeathCertificateController {
         certificateIssueService.createCertificate(targetResidentNum, "사망신고서");
 
         BirthDeathReportCertificateTop birthDeathReportCertificateTop = certificateIssueService.getDeathReportTop(targetResidentNum);
+        DeathReportCertificateTarget deathReportCertificateTarget = deathReportService.getDeathReportTarget(targetResidentNum);
+        DeathReportCertificateReporter deathReportCertificateReporter = deathReportService.getDeathReportReporter(targetResidentNum);
 
         model.addAttribute("birthDeathReportCertificateTop", birthDeathReportCertificateTop);
+        model.addAttribute("deathReportCertificateTarget", deathReportCertificateTarget);
+        model.addAttribute("deathReportCertificateReporter", deathReportCertificateReporter);
 
         return "deathReport";
     }

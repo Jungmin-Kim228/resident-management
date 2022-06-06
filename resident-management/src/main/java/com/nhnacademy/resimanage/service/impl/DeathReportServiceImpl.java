@@ -1,5 +1,7 @@
 package com.nhnacademy.resimanage.service.impl;
 
+import com.nhnacademy.resimanage.domain.certificate.DeathReportCertificateReporter;
+import com.nhnacademy.resimanage.domain.certificate.DeathReportCertificateTarget;
 import com.nhnacademy.resimanage.domain.deathReport.DeathReportDto;
 import com.nhnacademy.resimanage.domain.deathReport.DeathReportModifyRequest;
 import com.nhnacademy.resimanage.domain.deathReport.DeathReportRequest;
@@ -83,5 +85,15 @@ public class DeathReportServiceImpl implements DeathReportService {
 
         birthDeathReportResidentRepository.delete(birthDeathReportResident);
         return List.of(reportSerialNumber, targetSerialNumber);
+    }
+
+    @Override
+    public DeathReportCertificateTarget getDeathReportTarget(Integer targetResidentNum) {
+        return birthDeathReportResidentRepository.getDeathReportTargetByTargetResident(targetResidentNum);
+    }
+
+    @Override
+    public DeathReportCertificateReporter getDeathReportReporter(Integer targetResidentNum) {
+        return birthDeathReportResidentRepository.getDeathReportReporterByTargetResident(targetResidentNum);
     }
 }

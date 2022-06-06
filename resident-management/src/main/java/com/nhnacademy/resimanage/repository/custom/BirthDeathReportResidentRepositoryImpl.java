@@ -4,6 +4,8 @@ import com.nhnacademy.resimanage.domain.birthReport.BirthReportDto;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateParent;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateReporter;
 import com.nhnacademy.resimanage.domain.certificate.BirthReportCertificateTarget;
+import com.nhnacademy.resimanage.domain.certificate.DeathReportCertificateReporter;
+import com.nhnacademy.resimanage.domain.certificate.DeathReportCertificateTarget;
 import com.nhnacademy.resimanage.domain.deathReport.DeathReportDto;
 import com.nhnacademy.resimanage.entity.BirthDeathReportResident;
 import com.nhnacademy.resimanage.entity.QBirthDeathReportResident;
@@ -115,6 +117,44 @@ public class BirthDeathReportResidentRepositoryImpl extends QuerydslRepositorySu
                 resident.name,
                 resident.residentRegistrationNumber,
                 birthDeathReportResident.birthReportQualificationsCode,
+                birthDeathReportResident.emailAddress,
+                birthDeathReportResident.phoneNumber))
+            .fetchOne();
+    }
+
+    @Override
+    public DeathReportCertificateTarget getDeathReportTargetByTargetResident(
+        Integer targetResidentNum) {
+        QBirthDeathReportResident birthDeathReportResident = QBirthDeathReportResident.birthDeathReportResident;
+        QResident resident = QResident.resident;
+
+        return from(resident)
+            .leftJoin(birthDeathReportResident).on(resident.residentSerialNumber.eq(birthDeathReportResident.pk.residentSerialNumber))
+            .where(birthDeathReportResident.pk.birthDeathTypeCode.eq("사망"))
+            .where(resident.residentSerialNumber.eq(targetResidentNum))
+            .select(Projections.bean(DeathReportCertificateTarget.class,
+                resident.name,
+                resident.residentRegistrationNumber,
+                resident.deathDate,
+                resident.deathPlaceCode,
+                resident.deathPlaceAddress))
+            .fetchOne();
+    }
+
+    @Override
+    public DeathReportCertificateReporter getDeathReportReporterByTargetResident(
+        Integer targetResidentNum) {
+        QBirthDeathReportResident birthDeathReportResident = QBirthDeathReportResident.birthDeathReportResident;
+        QResident resident = QResident.resident;
+
+        return from(resident)
+            .innerJoin(birthDeathReportResident).on(birthDeathReportResident.pk.reportResidentSerialNumber.eq(resident.residentSerialNumber))
+            .where(birthDeathReportResident.pk.birthDeathTypeCode.eq("사망"))
+            .where(birthDeathReportResident.pk.residentSerialNumber.eq(targetResidentNum))
+            .select(Projections.bean(DeathReportCertificateReporter.class,
+                resident.name,
+                resident.residentRegistrationNumber,
+                birthDeathReportResident.deathReportQualificationsCode,
                 birthDeathReportResident.emailAddress,
                 birthDeathReportResident.phoneNumber))
             .fetchOne();
