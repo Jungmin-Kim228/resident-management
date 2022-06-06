@@ -161,8 +161,5 @@ select * from household_composition_resident;
 select * from household_movement_address;
 select * from resident;
 
--- 주민등록등본 세대주관계 파트
-select HC.household_relationship_code, R.name, R.resident_registration_number, HC.report_date, HC.household_composition_change_reason_code
-from household_composition_resident HC
-inner join resident R on R.resident_serial_number = HC.resident_serial_number
-where HC.household_serial_number = 1;
+
+insert into resident values(7, '남기석', '120315-1234567', '남', '20120315145900', '병원', '경기도 성남시 분당구 대왕판교로645번길', null, null, null);

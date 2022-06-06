@@ -3,6 +3,8 @@ package com.nhnacademy.resimanage.repository;
 import com.nhnacademy.resimanage.domain.resident.ResidentDto;
 import com.nhnacademy.resimanage.entity.Resident;
 import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,5 +14,5 @@ public interface ResidentRepository extends JpaRepository<Resident, Integer> {
 
     Resident getResidentByResidentSerialNumber(Integer residentSerialNumber);
 
-    List<Resident> getAllBy();
+    Page<Resident> getAllBy(Pageable pageable);
 }

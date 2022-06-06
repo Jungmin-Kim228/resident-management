@@ -118,16 +118,10 @@ esrc/main/java/com/nhnacademy/resimanage/repository/custom/BirthDeathReportResid
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-m
-=src/main/java/com/nhnacademy/resimanage/config/WebConfig.java,8\e\8efd75ed59f41e3a663cc58cc7a4044f7107bb4b
-t
-Dsrc/main/java/com/nhnacademy/resimanage/service/ResidentService.java,f\f\ff54197f6ba24c39fe52bade511b02d9edf49932
 
 Osrc/main/java/com/nhnacademy/resimanage/controller/rest/ResidentController.java,e\6\e6f9957509e4973e2a0ad85b916050d15589ca78
 x
 Hsrc/main/java/com/nhnacademy/resimanage/domain/resident/ResidentDto.java,4\e\4e55948f52333c2b8fb000181dda8e1377bc3944
-}
-Msrc/main/java/com/nhnacademy/resimanage/service/impl/ResidentServiceImpl.java,4\d\4d2899436818567f6115c5f2c23019ad3b5bfa44
 l
 <src/main/java/com/nhnacademy/resimanage/entity/Resident.java,e\2\e20fcd34834eeb17540f5aff3931e1612736f513
 €
@@ -152,8 +146,6 @@ e
 Wsrc/main/java/com/nhnacademy/resimanage/domain/certificate/HouseholdCertificateTop.java,f\b\fba16cacfc198169bbbcbdf7089d94514e9d1601
 ƒ
 Ssrc/main/java/com/nhnacademy/resimanage/controller/FamilyCertificateController.java,a\d\ad026d696fd1bee70fdd945627835be0c0e81f90
-~
-Nsrc/main/java/com/nhnacademy/resimanage/controller/ResidentListController.java,e\a\ea2cda80838e7bfa620980df9b61ea7ed65df6a7
 „
 Tsrc/main/java/com/nhnacademy/resimanage/repository/FamilyRelationshipRepository.java,7\8\78cba9714ba94bef71cb64db542fb9e2be424a57
 —

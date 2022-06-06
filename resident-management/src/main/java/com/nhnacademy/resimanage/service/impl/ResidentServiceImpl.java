@@ -1,5 +1,6 @@
 package com.nhnacademy.resimanage.service.impl;
 
+import com.nhnacademy.resimanage.domain.certificate.ResidentListDto;
 import com.nhnacademy.resimanage.domain.resident.ResidentDto;
 import com.nhnacademy.resimanage.domain.resident.ResidentModifyRequest;
 import com.nhnacademy.resimanage.domain.resident.ResidentRequest;
@@ -8,6 +9,8 @@ import com.nhnacademy.resimanage.repository.ResidentRepository;
 import com.nhnacademy.resimanage.service.ResidentService;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -56,8 +59,12 @@ public class ResidentServiceImpl implements ResidentService {
     }
 
     @Override
-    public List<Resident> getAllResidents() {
-        return residentRepository.getAllBy();
+    public Page<ResidentListDto> getAllResidents(Pageable pageable) {
+        Page<Resident> residentPage = residentRepository.getAllBy(pageable);
+        return residentPage.map(resident -> new ResidentListDto(
+            resident.getResidentSerialNumber(),
+            resident.getName()
+        ));
     }
 
     @Override

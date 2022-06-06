@@ -1,8 +1,11 @@
 package com.nhnacademy.resimanage.controller;
 
+import com.nhnacademy.resimanage.domain.certificate.ResidentListDto;
 import com.nhnacademy.resimanage.entity.Resident;
 import com.nhnacademy.resimanage.service.ResidentService;
 import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,9 +19,10 @@ public class ResidentListController {
     }
 
     @GetMapping("/residentList")
-    public String residentList(Model model) {
-        List<Resident> residents = residentService.getAllResidents();
-        model.addAttribute("residentList", residents);
+    public String residentList(Pageable pageable, Model model) {
+        Page<ResidentListDto> residents = residentService.getAllResidents(pageable);
+        model.addAttribute("pages", residents);
+        model.addAttribute("maxPage", 3);
         return "residentList";
     }
 }

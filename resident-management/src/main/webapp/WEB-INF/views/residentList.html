@@ -16,7 +16,7 @@
         <th>사망신고서</th>
         <th>증명서발급목록</th>
     </tr>
-    <tr th:each="resident : ${residentList}">
+    <tr th:each="resident : ${pages}">
 <!--        <p th:text="${resident.getBirthDeathReportResidentList().size()}"></p>-->
         <td th:text="${resident.residentSerialNumber}"></td>
         <td th:text="${resident.name}"></td>
@@ -52,5 +52,23 @@
         </td>
     </tr>
 </table>
+<div th:with="start=${(pages.number/maxPage)*maxPage + 1},
+                  end=(${(pages.totalPages == 0) ? 1 : (start + (maxPage - 1) < pages.totalPages ? start + (maxPage - 1) : pages.totalPages)})">
+    <span th:if="${start > 1}">
+        <a th:href="@{/residentList(page=0,size=3)}" th:text="'  <<  '"></a>
+    </span>
+    <span th:if="${start > 1}">
+        <a th:href="@{/residentList(page=${start-maxPage-1},size=3)}" th:text="'  <  '"></a>
+    </span>
+    <span th:each="page : ${#numbers.sequence(start, end)}">
+        <a th:href="@{/residentList(page=${page-1},size=3)}" th:text="  ${page}  "></a>
+    </span>
+    <span th:if="${end < pages.totalPages}">
+        <a th:href="@{/residentList(page=${start+maxPage-1},size=3)}" th:text="'  >  '"></a>
+    </span>
+    <span th:if="${end < pages.totalPages}">
+        <a th:href="@{/residentList(page=${pages.totalPages-1},size=3)}" th:text="'  >>  '"></a>
+    </span>
+</div>
 </body>
 </html>

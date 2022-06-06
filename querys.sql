@@ -95,3 +95,9 @@ select HM.last_address_yn, HM.house_movement_address, HM.house_movement_report_d
 from household_movement_address HM
 where HM.household_serial_number = 1
 order by HM.house_movement_report_date desc;
+
+-- 주민등록등본 세대주관계 파트
+select HC.household_relationship_code, R.name, R.resident_registration_number, HC.report_date, HC.household_composition_change_reason_code
+from household_composition_resident HC
+inner join resident R on R.resident_serial_number = HC.resident_serial_number
+where HC.household_serial_number = 1;
