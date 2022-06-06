@@ -85,8 +85,6 @@ Rsrc/main/java/com/nhnacademy/resimanage/controller/rest/DeathReportController.j
 Rsrc/main/java/com/nhnacademy/resimanage/controller/rest/BirthReportController.java,2\c\2c96f3393165fd176baefaf028a3e7721e3825db
 •
 esrc/main/java/com/nhnacademy/resimanage/repository/custom/HouseholdMovementAddressRepositoryImpl.java,9\8\980eeb12cb4b2acadf24b0f860baa16362028005
-}
-Msrc/main/java/com/nhnacademy/resimanage/repository/CertificateRepository.java,d\5\d5da16f984599091bf39b94499dc18cd896706bb
 Š
 Zsrc/main/java/com/nhnacademy/resimanage/repository/BirthDeathReportResidentRepository.java,c\c\cca0a7da21da5a02c198752b9ef15f9d1e2289df
 €
@@ -109,8 +107,6 @@ Gsrc/main/java/com/nhnacademy/resimanage/service/DeathReportService.java,c\c\cc
 gsrc/main/java/com/nhnacademy/resimanage/repository/custom/BirthDeathReportResidentRepositoryCustom.java,2\0\2012e8c5a05c0f7c0600acc0640c4acbaf464414
 Œ
 \src/main/java/com/nhnacademy/resimanage/domain/certificate/DeathReportCertificateTarget.java,4\5\45ae071631f63e95c1305710fcf83383ac66193e
-•
-esrc/main/java/com/nhnacademy/resimanage/repository/custom/BirthDeathReportResidentRepositoryImpl.java,2\a\2aaa81b4a8c7a8d7ece1ce3fbd096b8a94ca1150
 Ž
 ^src/main/java/com/nhnacademy/resimanage/domain/certificate/DeathReportCertificateReporter.java,a\6\a69b50e41ea38fc1603cbe1a511e2e331ae9c0a1
 ^
@@ -124,20 +120,6 @@ x
 Hsrc/main/java/com/nhnacademy/resimanage/domain/resident/ResidentDto.java,4\e\4e55948f52333c2b8fb000181dda8e1377bc3944
 l
 <src/main/java/com/nhnacademy/resimanage/entity/Resident.java,e\2\e20fcd34834eeb17540f5aff3931e1612736f513
-€
-Psrc/main/java/com/nhnacademy/resimanage/service/impl/CertificateServiceImpl.java,5\1\51714f655ca9abf9eb335c646e4b16928460f0e8
-|
-Lsrc/main/java/com/nhnacademy/resimanage/service/CertificateIssueService.java,9\e\9ece37a6adcd252a461d960e8b2183ebd6c806b3
-ˆ
-Xsrc/main/java/com/nhnacademy/resimanage/repository/custom/CertificateRepositoryImpl.java,e\2\e25f6ccb13563eaf4bf5ab43f72131702e301962
-ƒ
-Ssrc/main/java/com/nhnacademy/resimanage/controller/CertificateRecordController.java,4\8\48e973afa742cef501db4b3ac52edc1de7ab2164
-
-Qsrc/main/java/com/nhnacademy/resimanage/domain/certificate/CertificateRecord.java,a\5\a5583c9abdcc6008a5a220b32f37ebe74e145dbb
-d
-4src/main/webapp/WEB-INF/views/certificationList.html,c\7\c7efd6fb0a1fa3feedc816ec5d7f860dc222ce3a
-€
-Psrc/main/java/com/nhnacademy/resimanage/service/impl/DeathReportServiceImpl.java,8\6\867c534aac38b6698291a598b87e456d42430190
 ^
 .src/main/webapp/WEB-INF/views/birthReport.html,3\0\30c12a8a7689614e8437e3caa7a72fadcb50e622
 e
@@ -150,8 +132,6 @@ Ssrc/main/java/com/nhnacademy/resimanage/controller/FamilyCertificateController.
 Tsrc/main/java/com/nhnacademy/resimanage/repository/FamilyRelationshipRepository.java,7\8\78cba9714ba94bef71cb64db542fb9e2be424a57
 —
 gsrc/main/java/com/nhnacademy/resimanage/repository/custom/HouseholdMovementAddressRepositoryCustom.java,0\a\0a2a8c9d49726064f8e49764e788eff134a66fd1
-Š
-Zsrc/main/java/com/nhnacademy/resimanage/repository/custom/CertificateRepositoryCustom.java,4\4\44f7a387bd4b9c66d1875a1bce0c635b78d41730
 ‘
 asrc/main/java/com/nhnacademy/resimanage/repository/custom/FamilyRelationshipRepositoryCustom.java,3\e\3ef1a28a1c87036492ed3894be2d0009189a78d3
 

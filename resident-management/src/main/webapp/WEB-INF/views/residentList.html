@@ -45,7 +45,7 @@
             </form>
         </td>
         <td>
-            <form th:action="'/certificateRecordView'" method="post">
+            <form th:action="'/certificateRecordView?page=0&size=3'" method="post">
                 <input type="hidden" name="residentNum" th:value="${resident.residentSerialNumber}">
                 <input type="submit" value="조회">
             </form>

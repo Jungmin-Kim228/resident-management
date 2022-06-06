@@ -11,7 +11,6 @@ import com.nhnacademy.resimanage.entity.BirthDeathReportResident;
 import com.nhnacademy.resimanage.entity.QBirthDeathReportResident;
 import com.nhnacademy.resimanage.entity.QFamilyRelationship;
 import com.nhnacademy.resimanage.entity.QResident;
-import com.nhnacademy.resimanage.entity.Resident;
 import com.querydsl.core.types.Projections;
 import java.util.List;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;

@@ -3,7 +3,8 @@ package com.nhnacademy.resimanage.service;
 import com.nhnacademy.resimanage.domain.certificate.BirthDeathReportCertificateTop;
 import com.nhnacademy.resimanage.domain.certificate.CertificateRecord;
 import com.nhnacademy.resimanage.entity.CertificateIssue;
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface CertificateIssueService {
     void createCertificate(Integer residentNum, String typeCode);
@@ -14,5 +15,5 @@ public interface CertificateIssueService {
 
     BirthDeathReportCertificateTop getDeathReportTop(Integer targetResidentNum);
 
-    List<CertificateRecord> getCertificateRecord(Integer residentNum);
+    Page<CertificateRecord> getCertificateRecords(Pageable pageable, Integer residentNum);
 }

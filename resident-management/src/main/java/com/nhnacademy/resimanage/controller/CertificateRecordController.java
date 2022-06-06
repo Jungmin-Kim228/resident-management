@@ -2,9 +2,11 @@ package com.nhnacademy.resimanage.controller;
 
 import com.nhnacademy.resimanage.domain.certificate.CertificateRecord;
 import com.nhnacademy.resimanage.service.CertificateIssueService;
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -18,10 +20,24 @@ public class CertificateRecordController {
     }
 
     @PostMapping("/certificateRecordView")
-    public String certificateRecodeView(@RequestParam("residentNum") Integer residentNum, Model model) {
-        List<CertificateRecord> certificateRecord = certificateIssueService.getCertificateRecord(residentNum);
+    public String certificateRecordView(@RequestParam("residentNum") Integer residentNum,
+                                        Pageable pageable, Model model) {
+        Page<CertificateRecord> certificateRecord = certificateIssueService.getCertificateRecords(pageable, residentNum);
 
-        model.addAttribute("certificateRecord", certificateRecord);
+        model.addAttribute("pages", certificateRecord);
+        model.addAttribute("maxPage", 3);
+        model.addAttribute("residentNum", residentNum);
+        return "certificationList";
+    }
+
+    @GetMapping("/certificateRecordView")
+    public String certificateRecordViewPage(@RequestParam("residentNum") Integer residentNum,
+                                            Pageable pageable, Model model) {
+        Page<CertificateRecord> certificateRecord = certificateIssueService.getCertificateRecords(pageable, residentNum);
+
+        model.addAttribute("pages", certificateRecord);
+        model.addAttribute("maxPage", 3);
+        model.addAttribute("residentNum", residentNum);
         return "certificationList";
     }
 }

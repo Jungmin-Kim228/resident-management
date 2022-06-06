@@ -1,9 +1,7 @@
 package com.nhnacademy.resimanage.controller;
 
 import com.nhnacademy.resimanage.domain.certificate.ResidentListDto;
-import com.nhnacademy.resimanage.entity.Resident;
 import com.nhnacademy.resimanage.service.ResidentService;
-import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;

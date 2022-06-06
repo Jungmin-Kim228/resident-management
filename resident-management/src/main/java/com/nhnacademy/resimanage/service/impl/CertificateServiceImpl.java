@@ -8,6 +8,8 @@ import com.nhnacademy.resimanage.repository.CertificateRepository;
 import com.nhnacademy.resimanage.repository.ResidentRepository;
 import com.nhnacademy.resimanage.service.CertificateIssueService;
 import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -76,7 +78,12 @@ public class CertificateServiceImpl implements CertificateIssueService {
     }
 
     @Override
-    public List<CertificateRecord> getCertificateRecord(Integer residentNum) {
-        return certificateRepository.getCertificateRecodeByResident(residentNum);
+    public Page<CertificateRecord> getCertificateRecords(Pageable pageable, Integer residentNum) {
+        Page<CertificateIssue> certificateRecordPage = certificateRepository.getAllByResident_ResidentSerialNumber(pageable, residentNum);
+        return certificateRecordPage.map(certificateIssue -> new CertificateRecord(
+            certificateIssue.getCertificateConfirmationNumber(),
+            certificateIssue.getCertificateTypeCode(),
+            certificateIssue.getCertificateIssueDate()
+        ));
     }
 }
